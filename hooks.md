@@ -16,9 +16,9 @@ Each hook has the following properties:
 
 | Key | Type | Description |
 | :--- | :--- | :--- |
-| `name` | string | Name of this listener. Used as an id. |
-| `priority` | _number_ | _\(optional\)_ At runtime each hook is executed based on the priority with the lowest number running first and highest running last.**Default value:** 10 |
-| `handler` | function | A hook in BlueRain is an async function that resolves a promise. Details of handler function are given [below](hooks.md#listener-handler). |
+| `name` | _string_ | Name of this listener. Used as an id. |
+| `priority` | _number_ | _\(optional\) \(Default = 10\)_ At runtime each hook is executed based on the priority with the lowest number running first and highest running last. |
+| `handler` | _function_ | A hook in BlueRain is an async function that resolves a promise. Details of handler function are given [below](hooks.md#listener-handler). |
 
 ### Handler function
 
@@ -79,7 +79,7 @@ In this case, the listener name can be auto generated and default priority is us
 Hook Listeners are registered through the `BR.Hooks.tap` function:
 
 ```typescript
-BR.Hooks.tap('posts.edit', 'setEditedAt' , async (post, user) => {
+BR.Hooks.tap('posts.edit', 'setEditedAt' , async (post, { user }) => {
   post.editedAt = new Date();
   return post;
 });
