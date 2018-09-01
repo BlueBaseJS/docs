@@ -18,11 +18,11 @@ Each hook has the following properties:
 | :--- | :--- | :--- |
 | `name` | _string_ | Name of this listener. Used as an id. |
 | `priority` | _number_ | _\(optional\) \(Default = 10\)_ At runtime each hook is executed based on the priority with the lowest number running first and highest running last. |
-| `handler` | _function_ | A hook in BlueRain is an async function that resolves a promise. Details of handler function are given [below](hooks.md#listener-handler). |
+| `handler` | _function_ | A hook in BlueRain is an async function that resolves a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). Details of handler function are given [below](hooks.md#listener-handler). |
 
 ### Handler function
 
-This is the function that is executed at runtime. Handler functions in BlueRain are async functions, i.e. functions that return a Promise that resolve a value. 
+This is the function that is executed at runtime. Handler functions in BlueRain are async functions, i.e. functions that return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolve a value. 
 
 Each handler function receives 3 arguments during execution
 
@@ -76,10 +76,10 @@ In this case, the listener name can be auto generated and default priority is us
 
 ### Through API
 
-Hook Listeners are registered through the `BR.Hooks.tap` function:
+Hook Listeners are registered through the `BR.Hooks.register` function:
 
 ```typescript
-BR.Hooks.tap('posts.edit', 'setEditedAt' , async (post, { user }) => {
+BR.Hooks.register('posts.edit', 'setEditedAt' , async (post, { user }) => {
   post.editedAt = new Date();
   return post;
 });
@@ -99,9 +99,9 @@ Note that each filter function should return the main argument to pass it on to 
 
 ## Removing a Hook Listener
 
-Hook Listeners can be removed through the `BR.Hooks.untap` function:
+Hook Listeners can be removed through the `BR.Hooks.unregister` function:
 
 ```typescript
-BR.Hooks.untap('posts.edit', 'setEditedAt');
+BR.Hooks.unregister('posts.edit', 'setEditedAt');
 ```
 
