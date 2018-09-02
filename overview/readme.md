@@ -39,6 +39,9 @@
 * ⚙️ Settings
 * 👩‍💻 Platform Specific Code
 * 💄 Styling
+* 🏗 Layouts
+* 🍱 JSON Components
+* 🏛 Grid & Responsive Components
 
 ### System API
 
