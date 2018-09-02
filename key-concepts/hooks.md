@@ -74,6 +74,13 @@ const MyPlugin = {
 
 In this case, the listener name can be auto generated and default priority is used.
 
+{% hint style="warning" %}
+TODO: 
+
+* [ ] Add an example of adding multiple listeners against a single hook.
+* [ ] Add an example of using BlueRain Modules.
+{% endhint %}
+
 ### Through API
 
 Hook Listeners are registered through the `BR.Hooks.register` function:

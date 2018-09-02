@@ -25,7 +25,7 @@ import { BlueRain } from '@blueeast/bluerain';
 
 ### Return Type
 
-All `BR.Hooks.run` now returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves a value, previous it just returned the value.
+All `BR.Hooks.run` now returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves a value, previously it just returned the value.
 
 ```typescript
 // Previous
@@ -69,5 +69,5 @@ BR.Hooks.run('movies.edit', movie, actors, collections);
 BR.Hooks.run('movies.edit', movie, { actors, collections });
 ```
 
-More details of about the arguments passed to the [handler function](hooks.md#handler-function) can be found here.
+More details of about the arguments passed to the [handler function](../key-concepts/hooks.md#handler-function) can be found here.
 
