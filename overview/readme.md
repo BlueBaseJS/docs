@@ -37,6 +37,8 @@
 * ⏬ Preloading & Prefetching
 * 📗 App Menus
 * ⚙️ Settings
+* 👩‍💻 Platform Specific Code
+* 💄 Styling
 
 ### System API
 
