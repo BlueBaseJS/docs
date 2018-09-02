@@ -44,6 +44,8 @@
 
 * 📈 Analytics
 * 📔 Logger
+* 🔌 Plugin
+* ☔️ BlueRain Context
 
 ### Component API
 
