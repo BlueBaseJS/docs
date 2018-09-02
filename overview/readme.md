@@ -8,6 +8,7 @@
 * 🧠 Thinking in BlueRain
 * 🎛 Configuration with `bluerain.js`
 * 🎡 Project Lifecycle
+* ⛩ Main App Structure
 
 ### Key Concepts
 
