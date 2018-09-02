@@ -9,6 +9,7 @@
 * 🎛 Configuration with `bluerain.js`
 * 🎡 Project Lifecycle
 * ⛩ Main App Structure
+* 🏋️‍♀️ How BlueRain works
 
 ### Key Concepts
 
@@ -37,10 +38,16 @@
 * 📗 App Menus
 * ⚙️ Settings
 
-### API
+### System API
 
 * 📈 Analytics
 * 📔 Logger
+
+### Component API
+
+* Button
+* Card
+* ...etc
 
 ### CLI
 
@@ -49,4 +56,6 @@
 * Expo
 * Storybook
 * Storybook Native
+
+### Plugin Directory
 
