@@ -6,7 +6,7 @@ There are some major breaking changes in the new version of BlueRain V4. This pa
 
 The project name has changed in V4. Previous the framework was called `BlueRain OS`. We have decided to drop the `OS` part.
 
-This also means that from V4 onwards, the project will move to it's new homes at:
+From V4 onwards, the project will move to it's new homes at:
 
 * [Github](https://github.com/BlueEastCode/bluerain)
 * [NPM](https://www.npmjs.com/package/@blueeast/bluerain)
@@ -27,7 +27,7 @@ import { BlueRain } from '@blueeast/bluerain';
 
 All `BR.Hooks.run` now returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves a value, previously it just returned the value.
 
-```typescript
+```javascript
 // Previous
 modifier = BR.Hooks.run('movies.edit', modifier);
 
@@ -35,11 +35,17 @@ modifier = BR.Hooks.run('movies.edit', modifier);
 modifier = await BR.Hooks.run('movies.edit', modifier);
 ```
 
-### Add/Remove methods
+### Registry methods
+
+Since registry codebase has been completely revamped, the internal API and methods has  changed. So, if you use any of the `BR.Hooks` class methods directly, be sure to check docs for changes. 
+
+Some important changes are listed below:
+
+#### Add/Remove methods
 
 `add` and `remove` methods have been renamed to `register` and `unregister` respectively.
 
-### Set/Remove methods
+#### Set/Remove methods
 
 Behavior of set and remove has changed. 
 

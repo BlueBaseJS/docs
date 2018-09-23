@@ -1,4 +1,4 @@
-# Introduction
+# ☔️ Introduction
 
 {% hint style="danger" %}
 This is the documentation of the upcoming release of BlueRain. It may discuss features that are not yet developed but are in the roadmap.
