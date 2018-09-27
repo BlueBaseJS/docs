@@ -1,6 +1,8 @@
 # 🛂 Migrating from V3
 
-There are some major breaking changes in the new version of BlueRain V4. This page should serve as a guide to migrate BlueRain projects from V3.
+BlueRain V4 is a complete rewrite of the whole framework. These have resulted in some major breaking changes. We made a conscious decision to go ahead with it since we a major version, we wanted to do what's right, rather than carry mistakes of previous version.
+
+This page should serve as a guide to migrate BlueRain projects from V3.
 
 ## New Version, New Name
 
@@ -13,27 +15,12 @@ From V4 onwards, the project will move to it's new homes at:
 
 Unfortunately, this also means that all import statements need to be migrated as well. 
 
-```typescript
-// Previous
-import { BlueRain } from '@blueeast/bluerain-os';
-
-// New
-import { BlueRain } from '@blueeast/bluerain';
+```diff
+- import { BlueRain } from '@blueeast/bluerain-os';
++ import { BlueRain } from '@blueeast/bluerain';
 ```
 
 ## Hooks
-
-### Return Type
-
-All `BR.Hooks.run` now returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves a value, previously it just returned the value.
-
-```javascript
-// Previous
-modifier = BR.Hooks.run('movies.edit', modifier);
-
-// New
-modifier = await BR.Hooks.run('movies.edit', modifier);
-```
 
 ### Registry methods
 
@@ -45,12 +32,11 @@ Some important changes are listed below:
 
 `add` and `remove` methods have been renamed to `register` and `unregister` respectively.
 
-#### Set/Remove methods
+#### Set method
 
 Behavior of set and remove has changed. 
 
 * `set` method sets the whole array of all listeners of a hook, as opposed to a single listener.
-* `remove` method removes the whole array of all listeners of a hook, as opposed to a single listener.
 
 ### Filter and Event Registries
 
@@ -63,17 +49,67 @@ Both of these have been removed, and we only have a single unified registry now,
 
 This also means that there are no `BR.Filters` and `BR.Events` properties in BlueRain context anymore.
 
-### Arguments in handler function
+### Running a Hook
+
+#### Return Type
+
+All `BR.Hooks.run` now returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves a value, previously it just returned the value.
+
+```diff
+- modifier = BR.Hooks.run('movies.edit', modifier);
++ modifier = await BR.Hooks.run('movies.edit', modifier);
+```
+
+#### Arguments in handler function
 
 In V3 a hook handler function could receive any number of arguments. This has been changed and now a hook can only receive 3 fixed arguments.
 
-```typescript
-// Previous
-BR.Hooks.run('movies.edit', movie, actors, collections);
-
-// New
-BR.Hooks.run('movies.edit', movie, { actors, collections });
+```diff
+- BR.Hooks.run('movies.edit', movie, actors, collections);
++ BR.Hooks.run('movies.edit', movie, { actors, collections });
 ```
 
 More details of about the arguments passed to the [handler function](../key-concepts/hooks.md#handler-function) can be found here.
+
+## Plugins
+
+### Registry methods
+
+Since registry codebase has been completely revamped, the internal API and methods has  changed. So, if you use any of the `BR.Plugins` class methods directly, be sure to check docs for changes. 
+
+Some important changes are listed below:
+
+#### Add/Remove methods
+
+`add` and `remove` methods have been renamed to `register` and `unregister` respectively.
+
+#### Set method
+
+Behavior of set and remove has changed. 
+
+* `set` method sets the whole array of all listeners of a hook, as opposed to a single listener.
+
+#### initializeAll method
+
+`initializeAll` method has been removed. Use `bluerain.plugins.initialize.all` hook instead.
+
+```diff
+- BR.Plugins.initializeAll();
++ await BR.Hooks.run('bluerain.plugins.initialize.all', bootOptions);
+```
+
+#### registerMany method
+
+`registerMany` method has been removed. Use `bluerain.plugins.register` hook instead.
+
+```diff
+- BR.Plugins.registerMany(plugins);
++ await BR.Hooks.run('bluerain.plugins.register', bootOptions);
+```
+
+## Components
+
+### IconEnhanced
+
+IconEnhanced Component has been renamed to `DynamicIcon`
 
