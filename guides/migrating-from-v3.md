@@ -20,6 +20,31 @@ Unfortunately, this also means that all import statements need to be migrated as
 + import { BlueRain } from '@blueeast/bluerain';
 ```
 
+## Bye Bye, withBlueRain
+
+Theres no easy way to say this but...there's no `withBlueRain` HOC in this one. Use `BlueRainConsumer` component instead.
+
+```diff
+- const Button = withBlueRain(({ BR, ...rest }) => {
+-     return <BR.Components.Button {...rest} />;
+- });
+
++ const Button = (props) => (
++     <BlueRainConsumer>
++     {(BR) => <BR.Components.Button {...props} />}
++     </BlueRainConsumer>
++ );
+```
+
+## No Singleton Instance
+
+In V3 we used a single instance of BlueRain. This instance was exported from the library as `default` and `BR`. This has been removed in the V4. This means:
+
+* Now there is not default export in BlueRain 4.
+* Now there is no single BlueRain instance exported.
+
+This also allows us to use more than one BlueRain apps in a single project.
+
 ## Hooks
 
 ### Registry methods

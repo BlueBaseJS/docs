@@ -1,23 +1,35 @@
 # 🛣 Roadmap
 
+## Features
+
+The following features will be added in upcoming releases:
+
+* Route Registry
+* Asset Registry
+* Intl Registry
+* Theme Registry
+* New Store API
+* Analytics API
+* SSR API
+* Cache & Memoization Support
+* Improve Stateful Component
+* JsonSchema Component
+
 ## Future documentation Articles:
 
-### Overview
+#### Overview
 
-* 📲 Quick Start
 * 🧠 Thinking in BlueRain
-* 🎛 Configuration with `bluerain.js`
-* 🎡 Project Lifecycle
 * ⛩ Main App Structure
 * 🏋️‍♀️ How BlueRain works
 
-### Key Concepts
+#### Key Concepts
 
 * 💥 State Management
 * 🔀 Routing
 * 🖼 Assets
 
-### Guides
+#### Guides
 
 * ✂️ Code Splitting
 * 🔥 Hot Module Replacement
@@ -33,7 +45,6 @@
 * ⚡️ Progressive Web Apps
 * 🌅 Splash Screens
 * 📱 App Icons
-* 🗿 Icons
 * ⏬ Preloading & Prefetching
 * 📗 App Menus
 * ⚙️ Settings
@@ -43,20 +54,20 @@
 * 🍱 JSON Components
 * 🏛 Grid & Responsive Components
 
-### System API
+#### System API
 
 * 📈 Analytics
 * 📔 Logger
 * 🔌 Plugin
 * ☔️ BlueRain Context
 
-### Component API
+#### Component API
 
 * Button
 * Card
 * ...etc
 
-### CLI
+#### CLI
 
 * Web
 * Electron
@@ -64,5 +75,5 @@
 * Storybook
 * Storybook Native
 
-### Plugin Directory
+#### Plugin Directory
 
