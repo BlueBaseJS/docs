@@ -13,7 +13,6 @@ The following features will be added in upcoming releases:
 * SSR API
 * Cache & Memoization Support
 * Improve Stateful Component
-* JsonSchema Component
 
 ## Future documentation Articles:
 
