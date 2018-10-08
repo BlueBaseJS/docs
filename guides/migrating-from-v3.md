@@ -6,7 +6,9 @@ This page should serve as a guide to migrate BlueRain projects from V3.
 
 ## New Version, New Name
 
-The project name has changed in V4. Previous the framework was called `BlueRain OS`. We have decided to drop the `OS` part.
+The project name has changed in V4. Previous the framework was called `BlueRain OS`. We have decided to drop the `OS` part. So now, it's just `BlueRain`.
+
+![We&apos;re calling it... BlueRain](../.gitbook/assets/toy-story.png)
 
 From V4 onwards, the project will move to it's new homes at:
 
@@ -22,7 +24,9 @@ Unfortunately, this also means that all import statements need to be migrated as
 
 ## Bye Bye, withBlueRain
 
-Theres no easy way to say this but...there's no `withBlueRain` HOC in this one. Use `BlueRainConsumer` component instead.
+Theres no easy way to say this but... `withBlueRain` HOC is gone! Use `BlueRainConsumer` component instead.
+
+We did this to simplify the API and to keep the bundle size in check. 
 
 ```diff
 - const Button = withBlueRain(({ BR, ...rest }) => {

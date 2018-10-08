@@ -4,15 +4,16 @@
 
 The following features will be added in upcoming releases:
 
-* Route Registry
-* Asset Registry
-* Intl Registry
-* Theme Registry
-* New Store API
-* Analytics API
-* SSR API
-* Cache & Memoization Support
-* Improve Stateful Component
+* [Route Registry](https://github.com/BlueEastCode/bluerain/issues/1)
+* [Asset Registry](https://github.com/BlueEastCode/bluerain/issues/2)
+* [Intl Registry](https://github.com/BlueEastCode/bluerain/issues/3)
+* [Theme Registry](https://github.com/BlueEastCode/bluerain/issues/6)
+* [New Store API](https://github.com/BlueEastCode/bluerain/issues/4)
+* [Analytics API](https://github.com/BlueEastCode/bluerain/issues/5)
+* [SSR API](https://github.com/BlueEastCode/bluerain/issues/8)
+* [Cache Hook Results](https://github.com/BlueEastCode/bluerain/issues/10)
+* [Memoize Components](https://github.com/BlueEastCode/bluerain/issues/9)
+* [Improve Stateful Component](https://github.com/BlueEastCode/bluerain/issues/7)
 
 ## Future documentation Articles:
 
