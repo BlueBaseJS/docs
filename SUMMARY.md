@@ -24,9 +24,9 @@
 ## Components
 
 * [Icons](components/icon/README.md)
-  * [Icon 📌](components/icon/icon-1.md)
-  * [DynamicIcon](components/icon/dynamicicon.md)
-  * [PluginIcon](components/icon/pluginicon.md)
+  * [Icon](components/icon/icon-1.md)
+  * [DynamicIcon 📌](components/icon/dynamicicon.md)
+  * [PluginIcon 📌](components/icon/pluginicon.md)
 
 ## CLI
 

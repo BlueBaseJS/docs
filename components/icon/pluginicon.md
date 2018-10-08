@@ -1,2 +1,2 @@
-# PluginIcon
+# PluginIcon 📌
 

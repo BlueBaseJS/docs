@@ -1,2 +1,2 @@
-# DynamicIcon
+# DynamicIcon 📌
 

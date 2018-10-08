@@ -1,4 +1,4 @@
-# Icon 📌
+# Icon
 
 BR.Components.Icon
 
