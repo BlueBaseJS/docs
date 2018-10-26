@@ -6,5 +6,3 @@ BlueRain provides several options to show icons in the App.
 * [DynamicIcon](../components/icon/dynamicicon.md)
 * [PluginIcon](../components/icon/pluginicon.md)
 
-
-

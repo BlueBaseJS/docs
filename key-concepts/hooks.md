@@ -1,6 +1,6 @@
 # 🎣 Hooks
 
-Hooks are the backbone of BlueRain. They allows us to modify data or inject custom logic in any part of the application at runtime. 
+Hooks are the backbone of BlueRain. They allows us to modify data or inject custom logic in any part of the application at runtime.
 
 A hook can be [registered](hooks.md#registering-a-hook) by one of the methods listed below. At runtime, when a hook event is executed, each registered hook is run in the order of priority, and given the opportunity to modify a value by returning a new value.
 
@@ -22,7 +22,7 @@ Each hook has the following properties:
 
 ### Handler function
 
-This is the function that is executed at runtime. Handler functions in BlueRain maybe async functions, i.e. functions that return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolve a value. 
+This is the function that is executed at runtime. Handler functions in BlueRain maybe async functions, i.e. functions that return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolve a value.
 
 Each handler function receives 3 arguments during execution:
 
@@ -58,7 +58,7 @@ const MyHookCollection = {
         priority: 5,
         handler: async (value, args, BR) => {
             // your hook logic here
-            
+
             return value;
         }
     }
@@ -73,7 +73,7 @@ There is also a much simpler shorthand version. Rather than setting the whole li
 const MyHookCollection = {
     'hook.event': async (value, args, BR) => {
         // your hook logic here
-        
+
         return value;
     }
 }
@@ -93,13 +93,13 @@ const MyHookCollection = {
             priority: 5,
             handler: async (value, args, BR) => {
                 // your hook logic here
-                
+
                 return value;
             }
         },
         async (value, args, BR) => {
             // your hook logic here
-            
+
             return value;
         }
     ]
@@ -116,7 +116,7 @@ This function receives BlueRain context object as the only argument at execution
 const MyHookCollection = (BR) => ({
     'hook.event': async (value, args, BR) => {
         // your hook logic here
-        
+
         return value;
     }
 });
@@ -142,7 +142,7 @@ const MyPlugin = {
             priority: 5,
             handler: async (value, args, BR) => {
                 // your hook logic here
-                
+
                 return value;
             }
         }
@@ -175,7 +175,7 @@ export default {
             priority: 5,
             handler: async (value, args, BR) => {
                 // your hook logic here
-                
+
                 return value;
             }
         }
@@ -209,13 +209,13 @@ BR.Hooks.registerCollection({
             priority: 5,
             handler: async (value, args, BR) => {
                 // your hook logic here
-                
+
                 return value;
             }
         },
         async (value, args, BR) => {
             // your hook logic here
-            
+
             return value;
         }
     ]
@@ -258,7 +258,7 @@ But this method may not be as affective, as BlueRain needs to know a hook's name
 
 ### Handler function
 
-It is possible to spilt a hook's handler function. This way the handler's bundle is only downloaded when the hook is executed. 
+It is possible to spilt a hook's handler function. This way the handler's bundle is only downloaded when the hook is executed.
 
 This means that the code is not only **NOT** downloaded at boot time, but never at all if the hook is never executed.
 

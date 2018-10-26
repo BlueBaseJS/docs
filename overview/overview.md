@@ -17,19 +17,19 @@ The following features will be added in upcoming releases:
 
 ## Future documentation Articles:
 
-#### Overview
+### Overview
 
 * 🧠 Thinking in BlueRain
 * ⛩ Main App Structure
 * 🏋️‍♀️ How BlueRain works
 
-#### Key Concepts
+### Key Concepts
 
 * 💥 State Management
 * 🔀 Routing
 * 🖼 Assets
 
-#### Guides
+### Guides
 
 * ✂️ Code Splitting
 * 🔥 Hot Module Replacement
@@ -54,20 +54,20 @@ The following features will be added in upcoming releases:
 * 🍱 JSON Components
 * 🏛 Grid & Responsive Components
 
-#### System API
+### System API
 
 * 📈 Analytics
 * 📔 Logger
 * 🔌 Plugin
 * ☔️ BlueRain Context
 
-#### Component API
+### Component API
 
 * Button
 * Card
 * ...etc
 
-#### CLI
+### CLI
 
 * Web
 * Electron
@@ -75,5 +75,5 @@ The following features will be added in upcoming releases:
 * Storybook
 * Storybook Native
 
-#### Plugin Directory
+### Plugin Directory
 

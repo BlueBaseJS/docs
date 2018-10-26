@@ -15,7 +15,7 @@ From V4 onwards, the project will move to it's new homes at:
 * [Github](https://github.com/BlueEastCode/bluerain)
 * [NPM](https://www.npmjs.com/package/@blueeast/bluerain)
 
-Unfortunately, this also means that all import statements need to be migrated as well. 
+Unfortunately, this also means that all import statements need to be migrated as well.
 
 ```diff
 - import { BlueRain } from '@blueeast/bluerain-os';
@@ -26,7 +26,7 @@ Unfortunately, this also means that all import statements need to be migrated as
 
 Theres no easy way to say this but... `withBlueRain` HOC is gone! Use `BlueRainConsumer` component instead.
 
-We did this to simplify the API and to keep the bundle size in check. 
+We did this to simplify the API and to keep the bundle size in check.
 
 ```diff
 - const Button = withBlueRain(({ BR, ...rest }) => {
@@ -53,7 +53,7 @@ This also allows us to use more than one BlueRain apps in a single project.
 
 ### Registry methods
 
-Since registry codebase has been completely revamped, the internal API and methods has  changed. So, if you use any of the `BR.Hooks` class methods directly, be sure to check docs for changes. 
+Since registry codebase has been completely revamped, the internal API and methods has changed. So, if you use any of the `BR.Hooks` class methods directly, be sure to check docs for changes.
 
 Some important changes are listed below:
 
@@ -63,7 +63,7 @@ Some important changes are listed below:
 
 #### Set method
 
-Behavior of set and remove has changed. 
+Behavior of set and remove has changed.
 
 * `set` method sets the whole array of all listeners of a hook, as opposed to a single listener.
 
@@ -104,7 +104,7 @@ More details of about the arguments passed to the [handler function](../key-conc
 
 ### Registry methods
 
-Since registry codebase has been completely revamped, the internal API and methods has  changed. So, if you use any of the `BR.Plugins` class methods directly, be sure to check docs for changes. 
+Since registry codebase has been completely revamped, the internal API and methods has changed. So, if you use any of the `BR.Plugins` class methods directly, be sure to check docs for changes.
 
 Some important changes are listed below:
 
@@ -114,7 +114,7 @@ Some important changes are listed below:
 
 #### Set method
 
-Behavior of set and remove has changed. 
+Behavior of set and remove has changed.
 
 * `set` method sets the whole array of all listeners of a hook, as opposed to a single listener.
 
