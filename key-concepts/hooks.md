@@ -1,14 +1,14 @@
 # 🎣 Hooks
 
-Hooks are the backbone of BlueRain. They allows us to modify data or inject custom logic in any part of the application at runtime.
+Hooks are the backbone of BlueBase. They allows us to modify data or inject custom logic in any part of the application at runtime.
 
 A hook can be [registered](hooks.md#registering-a-hook) by one of the methods listed below. At runtime, when a hook event is executed, each registered hook is run in the order of priority, and given the opportunity to modify a value by returning a new value.
 
-BlueRain provides different lifecycle hooks to the application, but a plugin may define its own hooks as well.
+BlueBase provides different lifecycle hooks to the application, but a plugin may define its own hooks as well.
 
 ## API
 
-Each hook event can have multiple hooks registered in BlueRain. These hooks are executed in a waterfall sequence, where result of each listener is passed on to the next one.
+Each hook event can have multiple hooks registered in BlueBase. These hooks are executed in a waterfall sequence, where result of each listener is passed on to the next one.
 
 ### Properties
 
@@ -18,11 +18,11 @@ Each hook has the following properties:
 | :--- | :--- | :--- |
 | `name` | _string_ | Name of this hook. Used as an id. |
 | `priority` | _number_ | _\(optional\) \(Default = 10\)_ At runtime each hook is executed based on the priority with the lowest number running first and highest running last. |
-| `handler` | _function_ | A hook in BlueRain maybe an async function that resolves a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). Details of handler function are given [below](hooks.md#listener-handler). |
+| `handler` | _function_ | A hook in BlueBase maybe an async function that resolves a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). Details of handler function are given [below](hooks.md#listener-handler). |
 
 ### Handler function
 
-This is the function that is executed at runtime. Handler functions in BlueRain maybe async functions, i.e. functions that return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolve a value.
+This is the function that is executed at runtime. Handler functions in BlueBase maybe async functions, i.e. functions that return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolve a value.
 
 Each handler function receives 3 arguments during execution:
 
@@ -30,11 +30,11 @@ Each handler function receives 3 arguments during execution:
 | :--- | :--- |
 | `value` | This is the main value that is being hooked into. A hook expects this value to be returned. If the value is changed during execution, the next listener will receive the new value instead of the original version. |
 | `args` | An object that may provide addition context or information of the event. |
-| `BR` | This is the BlueRain context. |
+| `BR` | This is the BlueBase context. |
 
 ## Hook Collections
 
-In BlueRain multiple hooks can be registered for multiple events at once. We do this through the `HookCollections` data structure.
+In BlueBase multiple hooks can be registered for multiple events at once. We do this through the `HookCollections` data structure.
 
 A `HookCollection` is an object that has key-value pairs. Each property is a string that represents the hook event name. And the value of this property can be one of the following:
 
@@ -67,7 +67,7 @@ const MyHookCollection = {
 
 ### Handler Function
 
-There is also a much simpler shorthand version. Rather than setting the whole listener object, the handler function can be set directly. In this case, BlueRain will attempt to auto-generate a hook name.
+There is also a much simpler shorthand version. Rather than setting the whole listener object, the handler function can be set directly. In this case, BlueBase will attempt to auto-generate a hook name.
 
 ```javascript
 const MyHookCollection = {
@@ -108,9 +108,9 @@ const MyHookCollection = {
 
 ### Thunks
 
-BlueRain also supports Hook Collection thunks. Which means, a Hook Collection can be a function that returns `HookCollection` object.
+BlueBase also supports Hook Collection thunks. Which means, a Hook Collection can be a function that returns `HookCollection` object.
 
-This function receives BlueRain context object as the only argument at execution time.
+This function receives BlueBase context object as the only argument at execution time.
 
 ```javascript
 const MyHookCollection = (BR) => ({
@@ -124,10 +124,10 @@ const MyHookCollection = (BR) => ({
 
 ## Registering a Hook
 
-There are three ways to register to a hook listener is BlueRain.
+There are three ways to register to a hook listener is BlueBase.
 
 1. [Register a hook through Plugin](hooks.md#register-a-hook-through-plugin)
-2. [Register a hook through `hooks` property in `bluerain.js` file](hooks.md#register-a-hook-through-hooks-prop-in-bluerain-js-file)
+2. [Register a hook through `hooks` property in `bluebase.js` file](hooks.md#register-a-hook-through-hooks-prop-in-bluebase-js-file)
 3. [Register a hook through HookRegistry API](hooks.md#register-a-hook-through-api)
 
 ### Register a hook through Plugin
@@ -150,12 +150,12 @@ const MyPlugin = {
 }
 ```
 
-### Register a hook through hooks prop in "bluerain.js" file
+### Register a hook through hooks prop in "bluebase.js" file
 
-Hooks can be registered directly in `bluerain.js` as well. Just create a hooks property in the main BootOptions object. Like plugins, this property is also expected to be a [`HookCollection`](hooks.md#hook-collections).
+Hooks can be registered directly in `bluebase.js` as well. Just create a hooks property in the main BootOptions object. Like plugins, this property is also expected to be a [`HookCollection`](hooks.md#hook-collections).
 
 {% hint style="warning" %}
-The hooks added directly to the hooks property in `bluerain.js` are registered before any other code execution during boot. This means, that they have to ability to override some core internal process \(including the boot logic itself\).
+The hooks added directly to the hooks property in `bluebase.js` are registered before any other code execution during boot. This means, that they have to ability to override some core internal process \(including the boot logic itself\).
 
 This is not possible through plugin hooks, as they are registered and executed much later in execution.
 
@@ -163,11 +163,11 @@ For this reason, use this with caution. Unless extremely necessary, it is best t
 {% endhint %}
 
 {% code-tabs %}
-{% code-tabs-item title="bluerain.js" %}
+{% code-tabs-item title="bluebase.js" %}
 ```javascript
 export default {
 
-    // ...other bluerain.js properties
+    // ...other bluebase.js properties
 
     hooks: {
         'hook.event': {
@@ -244,7 +244,7 @@ Note that each filter function should return the main argument to pass it on to 
 
 ## Code Splitting
 
-In BlueRain code splitting is done through treating certain objects as [BlueRainModules](bluerain-modules.md). The following can be BlueRainModules:
+In BlueBase code splitting is done through treating certain objects as [BlueBaseModules](bluebase-modules.md). The following can be BlueBaseModules:
 
 ### BR.Hooks.register method param
 
@@ -254,7 +254,7 @@ When registering a hook through `BR.Hooks.register` method, a module can be regi
 BR.Hooks.register('posts.edit', import('./setEditedAtHook'));
 ```
 
-But this method may not be as affective, as BlueRain needs to know a hook's name at registration time. So this promise will be resolved immediately, even if the hook event \(e.g. `posts.edit`\) gets executed much later, or never at all. A much better way is to split just the handler function rather than the complete hook object:
+But this method may not be as affective, as BlueBase needs to know a hook's name at registration time. So this promise will be resolved immediately, even if the hook event \(e.g. `posts.edit`\) gets executed much later, or never at all. A much better way is to split just the handler function rather than the complete hook object:
 
 ### Handler function
 
@@ -271,7 +271,7 @@ BR.Hooks.register('posts.edit', {
 
 ### Hook Collections
 
-Each Hook in a Hook Collection is also evaluated as a BlueRainModule:
+Each Hook in a Hook Collection is also evaluated as a BlueBaseModule:
 
 ```typescript
 BR.Hooks.registerCollection({

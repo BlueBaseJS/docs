@@ -4,24 +4,24 @@
 
 The following features will be added in upcoming releases:
 
-* [Route Registry](https://github.com/BlueEastCode/bluerain/issues/1)
-* [Asset Registry](https://github.com/BlueEastCode/bluerain/issues/2)
-* [Intl Registry](https://github.com/BlueEastCode/bluerain/issues/3)
-* [Theme Registry](https://github.com/BlueEastCode/bluerain/issues/6)
-* [New Store API](https://github.com/BlueEastCode/bluerain/issues/4)
-* [Analytics API](https://github.com/BlueEastCode/bluerain/issues/5)
-* [SSR API](https://github.com/BlueEastCode/bluerain/issues/8)
-* [Cache Hook Results](https://github.com/BlueEastCode/bluerain/issues/10)
-* [Memoize Components](https://github.com/BlueEastCode/bluerain/issues/9)
-* [Improve Stateful Component](https://github.com/BlueEastCode/bluerain/issues/7)
+* [Route Registry](https://github.com/BlueBaseJS/core/issues/1)
+* [Asset Registry](https://github.com/BlueBaseJS/core/issues/2)
+* [Intl Registry](https://github.com/BlueBaseJS/core/issues/3)
+* [Theme Registry](https://github.com/BlueBaseJS/core/issues/6)
+* [New Store API](https://github.com/BlueBaseJS/core/issues/4)
+* [Analytics API](https://github.com/BlueBaseJS/core/issues/5)
+* [SSR API](https://github.com/BlueBaseJS/core/issues/8)
+* [Cache Hook Results](https://github.com/BlueBaseJS/core/issues/10)
+* [Memoize Components](https://github.com/BlueBaseJS/core/issues/9)
+* [Improve Stateful Component](https://github.com/BlueBaseJS/core/issues/7)
 
 ## Future documentation Articles:
 
 ### Overview
 
-* 🧠 Thinking in BlueRain
+* 🧠 Thinking in BlueBase
 * ⛩ Main App Structure
-* 🏋️‍♀️ How BlueRain works
+* 🏋️‍♀️ How BlueBase works
 
 ### Key Concepts
 
@@ -59,7 +59,7 @@ The following features will be added in upcoming releases:
 * 📈 Analytics
 * 📔 Logger
 * 🔌 Plugin
-* ☔️ BlueRain Context
+* ☔️ BlueBase Context
 
 ### Component API
 

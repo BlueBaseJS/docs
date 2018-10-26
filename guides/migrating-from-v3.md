@@ -1,25 +1,25 @@
 # 🛂 Migrating from V3
 
-BlueRain V4 is a complete rewrite of the whole framework. These have resulted in some major breaking changes. We made a conscious decision to go ahead with it since we a major version, we wanted to do what's right, rather than carry mistakes of previous version.
+BlueBase V4 is a complete rewrite of the whole framework. These have resulted in some major breaking changes. We made a conscious decision to go ahead with it since we a major version, we wanted to do what's right, rather than carry mistakes of previous version.
 
-This page should serve as a guide to migrate BlueRain projects from V3.
+This page should serve as a guide to migrate BlueBase projects from V3.
 
 ## New Version, New Name
 
-The project name has changed in V4. Previous the framework was called `BlueRain OS`. We have decided to drop the `OS` part. So now, it's just `BlueRain`.
+The project name has changed in V4. Previous the framework was called `BlueBase OS`. We have decided to drop the `OS` part. So now, it's just `BlueBase`.
 
-![We&apos;re calling it... BlueRain](../.gitbook/assets/toy-story.png)
+![We&apos;re calling it... BlueBase](../.gitbook/assets/toy-story.png)
 
 From V4 onwards, the project will move to it's new homes at:
 
-* [Github](https://github.com/BlueEastCode/bluerain)
+* [Github](https://github.com/BlueBaseJS/core)
 * [NPM](https://www.npmjs.com/package/@blueeast/bluerain)
 
 Unfortunately, this also means that all import statements need to be migrated as well.
 
 ```diff
-- import { BlueRain } from '@blueeast/bluerain-os';
-+ import { BlueRain } from '@blueeast/bluerain';
+- import { BlueBase } from '@blueeast/bluerain-os';
++ import { BlueBase } from '@blueeast/bluerain';
 ```
 
 ## Bye Bye, withBlueRain
@@ -34,20 +34,20 @@ We did this to simplify the API and to keep the bundle size in check.
 - });
 
 + const Button = (props) => (
-+     <BlueRainConsumer>
++     <BlueBaseConsumer>
 +     {(BR) => <BR.Components.Button {...props} />}
-+     </BlueRainConsumer>
++     </BlueBaseConsumer>
 + );
 ```
 
 ## No Singleton Instance
 
-In V3 we used a single instance of BlueRain. This instance was exported from the library as `default` and `BR`. This has been removed in the V4. This means:
+In V3 we used a single instance of BlueBase. This instance was exported from the library as `default` and `BR`. This has been removed in the V4. This means:
 
-* Now there is not default export in BlueRain 4.
-* Now there is no single BlueRain instance exported.
+* Now there is not default export in BlueBase 4.
+* Now there is no single BlueBase instance exported.
 
-This also allows us to use more than one BlueRain apps in a single project.
+This also allows us to use more than one BlueBase apps in a single project.
 
 ## Hooks
 
@@ -76,7 +76,7 @@ Hooks in V3 were made of 2 registries:
 
 Both of these have been removed, and we only have a single unified registry now, i.e. HookRegistry.
 
-This also means that there are no `BR.Filters` and `BR.Events` properties in BlueRain context anymore.
+This also means that there are no `BR.Filters` and `BR.Events` properties in BlueBase context anymore.
 
 ### Running a Hook
 

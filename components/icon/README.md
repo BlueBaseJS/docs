@@ -1,6 +1,6 @@
 # Icons
 
-There are 3 Icon types recognized by BlueRain
+There are 3 Icon types recognized by BlueBase
 
 * [Icon](icon-1.md)
 * [DynamicIcon](dynamicicon.md)

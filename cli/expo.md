@@ -1,7 +1,7 @@
 ---
 description: >-
   Expo is a development tool for Mobile specific Apps using React and React
-  Native. BlueRain Cli v4 has it's own builtin commands that integrate Expo
+  Native. BlueBase Cli v4 has it's own builtin commands that integrate Expo
   within itself.
 ---
 
@@ -19,7 +19,7 @@ This will install the latest Expo Plugin for global usage and will install the n
 
 ## Usage
 
-After done setting up this plugin. You can go ahead and utilize this cli feature in your newly created or already existing project using BlueRainOS.
+After done setting up this plugin. You can go ahead and utilize this cli feature in your newly created or already existing project using BlueBase.
 
 ```text
 bluerain expo:init
