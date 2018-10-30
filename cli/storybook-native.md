@@ -5,7 +5,7 @@ description: >-
   development environment on a mobile device.
 ---
 
-# Storybook Native \(Native\)
+# Storybook Native \(Expo\)
 
 ## Installation
 
