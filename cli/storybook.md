@@ -1,2 +1,2 @@
-# Storybook
+# Storybook \(Web\)
 

@@ -32,6 +32,6 @@
 
 * [Expo](cli/expo.md)
 * [Web](cli/web.md)
-* [Storybook](cli/storybook.md)
-* [Storybook Native](cli/storybook-native.md)
+* [Storybook \(Web\)](cli/storybook.md)
+* [Storybook Native \(Native\)](cli/storybook-native.md)
 
