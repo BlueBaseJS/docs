@@ -31,5 +31,7 @@
 ## CLI
 
 * [Expo](cli/expo.md)
+* [Web](cli/web.md)
+* [Storybook](cli/storybook.md)
 * [Storybook Native](cli/storybook-native.md)
 
