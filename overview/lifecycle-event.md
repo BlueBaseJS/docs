@@ -1,16 +1,16 @@
 # 🎡 Lifecycle Events
 
-## BlueBase Boot Lifecycle Events
+## BlueRain Boot Lifecycle Events
 
-* bluebase.boot
-  * bluebase.boot.start
-    * bluebase.components.register.internal
-  * bluebase.configs.load
-  * bluebase.components.register
-  * bluebase.hooks.register
-  * bluebase.routes.register
-  * bluebase.plugins.register
-  * bluebase.plugins.initialize.all
-    * bluebase.plugins.initialize
-  * bluebase.boot.end
+* bluerain.boot
+  * bluerain.boot.start
+    * bluerain.components.register.internal
+  * bluerain.configs.load
+  * bluerain.components.register
+  * bluerain.hooks.register
+  * bluerain.routes.register
+  * bluerain.plugins.register
+  * bluerain.plugins.initialize.all
+    * bluerain.plugins.initialize
+  * bluerain.boot.end
 

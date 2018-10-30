@@ -1,8 +1,8 @@
 # 📲 Quick Start
 
-## Install BlueBase CLI
+## Install BlueRain CLI
 
-The first step to get started is to install BlueBase CLI as a global dependency.
+The first step to get started is to install BlueRain CLI as a global dependency.
 
 ```text
 yarn global add @blueeast/bluerain-cli
@@ -10,7 +10,7 @@ yarn global add @blueeast/bluerain-cli
 
 ## Install Target Platform CLI Plugin
 
-Next, you need to install the desired target platform plugin of BlueBase CLI. This plugin adds commands to the CLI that can perform platform specific tasks \(i.e. start project in development mode, build project, etc\).
+Next, you need to install the desired target platform plugin of BlueRain CLI. This plugin adds commands to the CLI that can perform platform specific tasks \(i.e. start project in development mode, build project, etc\).
 
 {% tabs %}
 {% tab title="Web" %}
@@ -55,4 +55,6 @@ bluerain electron:start
 ```
 {% endtab %}
 {% endtabs %}
+
+
 

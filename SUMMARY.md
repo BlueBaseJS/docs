@@ -5,16 +5,16 @@
 ## Overview
 
 * [📲 Quick Start](overview/quick-start.md)
-* [🎛 Configuration with bluebase.js](overview/configuration-with-bluebase.js.md)
+* [🎛 Configuration with bluerain.js](overview/configuration-with-bluerain.js.md)
 * [🎡 Lifecycle Events](overview/lifecycle-event.md)
-* [🛣 Roadmap](overview/overview.md)
+* [🛣 Roadmap](overview/readme.md)
 
 ## Key Concepts
 
 * [🔌 Plugins](key-concepts/plugins.md)
 * [🎣 Hooks](key-concepts/hooks.md)
 * [🎁 Components](key-concepts/components.md)
-* [📦 BlueBase Modules](key-concepts/bluebase-modules.md)
+* [📦 BlueRain Modules](key-concepts/bluerain-modules.md)
 
 ## Guides
 

@@ -1,4 +1,2 @@
 # DynamicIcon 📌
 
-
-

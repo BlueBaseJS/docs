@@ -1,6 +1,6 @@
 # 🔌 Plugins
 
-In BlueBase all functionality and features in an app are added as plugins. Each plugin is a separate NPM package.
+In BlueRain all functionality and features in an app are added as plugins. Each plugin is a separate NPM package.
 
 A plugin can add components, routes and hooks.
 
