@@ -1,7 +1,6 @@
 # Table of contents
 
 * [💧 Introduction](README.md)
-* [Untitled](untitled.md)
 
 ## Overview
 
@@ -12,12 +11,15 @@
 
 ## Key Concepts
 
-* [🔌 Plugins](key-concepts/plugins.md)
+* [🔌 Plugins](key-concepts/plugins/README.md)
+  * [Developing an Analytics Plugin](key-concepts/plugins/developing-an-analytics-plugin.md)
+  * [Developing a Logger Plugin](key-concepts/plugins/developing-a-logger-plugin.md)
 * [🎣 Hooks](key-concepts/hooks.md)
 * [🎁 Components](key-concepts/components.md)
 * [📦 BlueRain Modules](key-concepts/bluerain-modules.md)
 * [🎛 Configs](key-concepts/configs.md)
 * [📈 Analytics](key-concepts/analytics.md)
+* [📔 Logger](key-concepts/logger.md)
 * [🎨 Themes](key-concepts/themes/README.md)
   * [Installation](key-concepts/themes/installation.md)
   * [Override Themes](key-concepts/themes/override-themes.md)
