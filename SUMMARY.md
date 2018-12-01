@@ -14,6 +14,7 @@
 * [🔌 Plugins](key-concepts/plugins/README.md)
   * [Developing an Analytics Plugin](key-concepts/plugins/developing-an-analytics-plugin.md)
   * [Developing a Logger Plugin](key-concepts/plugins/developing-a-logger-plugin.md)
+  * [Developing a Theme Plugin](key-concepts/plugins/developing-a-theme-plugin.md)
 * [🎣 Hooks](key-concepts/hooks.md)
 * [🎁 Components](key-concepts/components.md)
 * [📦 BlueRain Modules](key-concepts/bluerain-modules.md)
@@ -22,10 +23,11 @@
 * [📔 Logger](key-concepts/logger.md)
 * [🎨 Themes](key-concepts/themes/README.md)
   * [Installation](key-concepts/themes/installation.md)
-  * [Override Themes](key-concepts/themes/override-themes.md)
   * [Consuming Selected Theme](key-concepts/themes/consuming-selected-theme.md)
+  * [Customise Themes](key-concepts/themes/override-themes.md)
   * [Customise Components](key-concepts/themes/customise-components.md)
   * [Theme Configs](key-concepts/themes/theme-configs.md)
+  * [Theme Structure](key-concepts/themes/theme-structure.md)
 * [Registry](key-concepts/registry.md)
 
 ## Guides

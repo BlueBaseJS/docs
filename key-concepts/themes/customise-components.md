@@ -6,7 +6,7 @@ Theming in BlueBase provides an elaborate mechanism to customise component style
 Component styles in all of the following methods can be thunks as well.
 {% endhint %}
 
-### 1. Through `defaultStlyes` static prop
+## Through `defaultStlyes` static prop
 
 In BlueBase it is possible to provide a `defaultStyles` static property to a component. This is very similar to the `defaultProps` concept of React.
 
@@ -39,9 +39,31 @@ In terms of priority, this method has the least priority, and these styles may b
 
 #### Use When
 
-Use this method to define the default styles of the components. These will represent a state of the component without any customisation.
+Use this method to define the default styles of the component. These will represent a state of the component without any customisation.
 
-### Through Component Registry
+## Through Component Registry
+
+It is also possible to save styles of a component in the ComponentRegistry.
+
+#### When registering a new component
+
+```typescript
+class MaterialUIPlugin extends Plugin {
+
+    public components = {
+        ThemedCard: {
+            rawComponent: ThemedCardComponent,
+            styles: {
+                root: {
+                    backgroundColor: 'orange'
+                }
+            }
+        }
+    }
+}
+```
+
+#### Overriding styles of an existing component.
 
 ```typescript
 BB.Components.setStyles('ThemedCard', {
@@ -51,7 +73,15 @@ BB.Components.setStyles('ThemedCard', {
 });
 ```
 
-### Through theme
+#### Priority
+
+In terms of priority, these styles override `defaultStyles` but they can be overwritten by following methods. 
+
+#### Use When
+
+Us this method when you want to define global styles of a component, but you also want other plugins to able to customise them.
+
+## Through theme
 
 ```typescript
 export const theme = {
@@ -66,7 +96,7 @@ export const theme = {
 };
 ```
 
-### Through `styles` prop
+## Through `styles` prop
 
 ```typescript
 const Foo = () => (
