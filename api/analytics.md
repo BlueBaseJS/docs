@@ -36,5 +36,5 @@ BB.Analytics.track({
 
 ## Integrations
 
-To add support for an Analytics Provider see this [guide](plugins/developing-an-analytics-plugin.md).
+To add support for an Analytics Provider see this [guide](../key-concepts/plugins/developing-an-analytics-plugin.md).
 

@@ -3,17 +3,17 @@
 A plugin can register any number of themes. To do this simple set the `themes` property of your plugin class.
 
 ```typescript
-class MaterialUIPlugin extends Plugin {
+const Plugin = {
 
-    public themes = [{
+    themes: [{
         name: 'Material UI (Light)',
-        slug: 'material-ui-light',
+        key: 'material-ui-light',
         mode: 'light',
 
         // .. other theme props
     }, {
         name: 'Material UI (Dark)',
-        slug: 'material-ui-dark',
+        key: 'material-ui-dark',
         mode: 'dark',
 
         // .. other theme props
@@ -25,10 +25,10 @@ class MaterialUIPlugin extends Plugin {
 The following guide needs to be added to [Themes](../themes/) section.
 {% endhint %}
 
-Each object in the theme property can be a [BlueBase Module](../bluerain-modules.md). This mean each theme's code can be split into different bundles on web.
+Each object in the theme property can be a [BlueBase Module](../../api/bluerain-modules.md). This mean each theme's code can be split into different bundles on web.
 
 ```typescript
-class MaterialUIPlugin extends Plugin {
+const Plugin = {
 
     public themes = [
         import('path/to/theme-1'),
@@ -37,7 +37,7 @@ class MaterialUIPlugin extends Plugin {
 }
 ```
 
-Be aware though, that if you use this approach, these bundles will be downloaded during boot time. This is because BlueBase needs know each theme's `name` and `slug` to store them in registry.
+Be aware though, that if you use this approach, these bundles will be downloaded during boot time. This is because BlueBase needs know each theme's `name` and `key` to store them in registry.
 
 If you want to split the theme so that they are downloaded only when selected, spilt the internal `theme` property.
 
@@ -46,7 +46,7 @@ class MaterialUIPlugin extends Plugin {
 
     public themes = [{
         name: 'Material UI (Light)',
-        slug: 'material-ui-light',
+        key: 'material-ui-light',
         mode: 'light',
 
         theme: import('./theme-rules-light'),
@@ -54,7 +54,7 @@ class MaterialUIPlugin extends Plugin {
         // .. other theme props
     }, {
         name: 'Material UI (Dark)',
-        slug: 'material-ui-dark',
+        key: 'material-ui-dark',
         mode: 'dark',
 
         theme: import('./theme-rules-dark'),

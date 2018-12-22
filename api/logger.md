@@ -26,5 +26,5 @@ try {
 
 ## Integrations
 
-To add support for a Logging Provider see this [guide](plugins/developing-a-logger-plugin.md).
+To add support for a Logging Provider see this [guide](../key-concepts/plugins/developing-a-logger-plugin.md).
 

@@ -1,42 +1,15 @@
 # 🔌 Plugins
 
-In BlueBase all functionality and features in an app are added as plugins.
+Plugins are the best way to add features to your BlueBase app.
 
 It is recommended to keep all plugins in separate NPM packages. This helps us keep all aspects of an app modular. Adding or removing any feature becomes a matter of enabling or disabling a plugin.
 
 A plugin can be used to do any of the following:
 
 * Subscribe to application's lifecycle events through [Hooks](https://github.com/BlueBaseJS/docs/tree/6710d83d9e42436a90100426d36314c69fa496f6/key-concepts/plugins/hooks.md) and override/modify application behaviour in a non-invasive way.
-* Add or modify Themes.
-* Add or override [Components](https://github.com/BlueBaseJS/docs/tree/6710d83d9e42436a90100426d36314c69fa496f6/key-concepts/plugins/components.md).
+* Add new or modify existing [Components](https://github.com/BlueBaseJS/docs/tree/6710d83d9e42436a90100426d36314c69fa496f6/key-concepts/plugins/components.md) in the app. Moreover, plugins can wrap any component in Higher Order Components \(HOCs\).
+* Modify an existing [Theme](../themes/) in the app, or extend it to create a new one. It is also possible to create a theme completely from scratch.
+* Add new or modify existing routes to the app.
 
-Additionally, plugins can be configurable through Plugin Configs.
-
-## API
-
-A plugin object can have the following properties:
-
-| Key | Type | Required | Description |
-| :--- | :---: | :---: | :--- |
-| `name` | _string_ | yes | Name of the plugin. |
-| `key` | string | no | This property is used as an ID throughout the system. |
-| `description` | string | no | Plugin description. |
-| `version` | string | no | Plugin version. |
-| `categories` | string \| string\[\] | no | [Plugin Categories](https://github.com/BlueBaseJS/docs/tree/6710d83d9e42436a90100426d36314c69fa496f6/key-concepts/plugins/plugins.md#plugin-categories). |
-| `icon` |  |  |  |
-| `enabled` | boolean | no | _\(Default = true\)_ Flag to check if a plugin is enabled. |
-| `hooks` |  |  |  |
-| `components` |  |  |  |
-|  |  |  |  |
-
-## Plugin Categories
-
-* app
-* store
-* router
-* logger
-* theme
-* analytics
-
-Plugins are the best way to add or extend BlueRain functionalities \(apps and system\). For example, track visits using Google Analytics, etc.
+Additionally, plugins can be configurable through [Plugin Configs](making-a-plugin-configurable.md).
 
