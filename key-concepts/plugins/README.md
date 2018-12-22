@@ -38,3 +38,11 @@ A plugin object can have the following properties:
 * theme
 * analytics
 
+
+
+
+
+
+
+Plugins are the best way to add or extend BlueRain functionalities (apps and system). For example, track visits using Google Analytics, etc.
+
