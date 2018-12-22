@@ -1,6 +1,6 @@
 # Developing a Theme Plugin
 
-A plugin can register any number of themes. To do this simple set the `themes` property of your plugin class.
+A plugin can register any number of themes. To do this simple set the `themes` property of your plugin class.
 
 ```typescript
 class MaterialUIPlugin extends Plugin {
@@ -9,13 +9,13 @@ class MaterialUIPlugin extends Plugin {
         name: 'Material UI (Light)',
         slug: 'material-ui-light',
         mode: 'light',
-        
+
         // .. other theme props
     }, {
         name: 'Material UI (Dark)',
         slug: 'material-ui-dark',
         mode: 'dark',
-        
+
         // .. other theme props
     }]
 }
@@ -31,9 +31,9 @@ Each object in the theme property can be a [BlueBase Module](../bluerain-modules
 class MaterialUIPlugin extends Plugin {
 
     public themes = [
-		import('path/to/theme-1'),
-		import('path/to/theme-2'),
-	]
+        import('path/to/theme-1'),
+        import('path/to/theme-2'),
+    ]
 }
 ```
 
@@ -48,7 +48,7 @@ class MaterialUIPlugin extends Plugin {
         name: 'Material UI (Light)',
         slug: 'material-ui-light',
         mode: 'light',
-        
+
         theme: import('./theme-rules-light'),
 
         // .. other theme props
@@ -56,9 +56,9 @@ class MaterialUIPlugin extends Plugin {
         name: 'Material UI (Dark)',
         slug: 'material-ui-dark',
         mode: 'dark',
-        
+
         theme: import('./theme-rules-dark'),
-        
+
         // .. other theme props
     }]
 }

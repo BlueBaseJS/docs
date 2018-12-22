@@ -244,7 +244,7 @@ In each case, the **first** argument is the key of the hook event, the **second*
 
 ## Code Splitting
 
-In BlueBase code splitting is done through treating certain objects as [BlueBaseModules](bluebase-modules.md). The following can be BlueBaseModules:
+In BlueBase code splitting is done through treating certain objects as [BlueBaseModules](). The following can be BlueBaseModules:
 
 ### BR.Hooks.register method param
 

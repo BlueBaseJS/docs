@@ -12,11 +12,9 @@ BlueBase uses an internal data structure to store everything.
 | Route ⁉️ |  |  |
 | Theme | name, slug, mode, alternate | BlueBaseModule&lt;Theme&gt; |
 
-
-
 ## Components
 
-Render prop component that resolves and returns a value. 
+Render prop component that resolves and returns a value.
 
 * Automatically re-renders on value change.
 * Shows loading & error states while resolving
@@ -30,6 +28,4 @@ const Foo = () => (
     </RegistryValue>
 );
 ```
-
-
 

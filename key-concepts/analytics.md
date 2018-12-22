@@ -4,7 +4,7 @@ The Analytics API enables you to collect analytics data for your app.
 
 ## Track Events
 
-To record an event use the `track` method of BlueBase's Analytics API.
+To record an event use the `track` method of BlueBase's Analytics API.
 
 ```typescript
 BB.Analytics.track({ name: 'albumVisit' });

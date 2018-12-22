@@ -6,9 +6,9 @@ Theming in BlueBase provides an elaborate mechanism to customise component style
 Component styles in all of the following methods can be thunks as well.
 {% endhint %}
 
-## Through `defaultStlyes` static prop
+## Through `defaultStlyes` static prop
 
-In BlueBase it is possible to provide a `defaultStyles` static property to a component. This is very similar to the `defaultProps` concept of React.
+In BlueBase it is possible to provide a `defaultStyles` static property to a component. This is very similar to the `defaultProps` concept of React.
 
 ```typescript
 import React from 'react';
@@ -24,20 +24,20 @@ export class ThemedCard extends React.Component {
             backgroundColor: 'green'
         }
     }
-    
+
     render() {
         const { styles, isHovering } = this.props;
-        
+
         return (<Card style={isHovering ? styles.hover : styles.root} />);
     }
 }
 ```
 
-#### Priority
+### Priority
 
 In terms of priority, this method has the least priority, and these styles may be overwritten by any of the following methods.
 
-#### Use When
+### Use When
 
 Use this method to define the default styles of the component. These will represent a state of the component without any customisation.
 
@@ -45,7 +45,7 @@ Use this method to define the default styles of the component. These will repres
 
 It is also possible to save styles of a component in the ComponentRegistry.
 
-#### When registering a new component
+### When registering a new component
 
 ```typescript
 class MaterialUIPlugin extends Plugin {
@@ -63,7 +63,7 @@ class MaterialUIPlugin extends Plugin {
 }
 ```
 
-#### Overriding styles of an existing component.
+### Overriding styles of an existing component.
 
 ```typescript
 BB.Components.setStyles('ThemedCard', {
@@ -73,11 +73,11 @@ BB.Components.setStyles('ThemedCard', {
 });
 ```
 
-#### Priority
+### Priority
 
-In terms of priority, these styles override `defaultStyles` but they can be overwritten by following methods. 
+In terms of priority, these styles override `defaultStyles` but they can be overwritten by following methods.
 
-#### Use When
+### Use When
 
 Us this method when you want to define global styles of a component, but you also want other plugins to able to customise them.
 
@@ -96,7 +96,7 @@ export const theme = {
 };
 ```
 
-## Through `styles` prop
+## Through `styles` prop
 
 ```typescript
 const Foo = () => (
@@ -114,14 +114,14 @@ In BlueBase, ComponentStyles have the following structure:
 
 ```typescript
 interface ComponentStyles {
-	// rule
-	[key: string]: ViewStyle | TextStyle | ImageStyle | { [prop: string]: string };
+    // rule
+    [key: string]: ViewStyle | TextStyle | ImageStyle | { [prop: string]: string };
 }
 ```
 
 This is very similar to React Native's [StyleSheet.create](https://facebook.github.io/react-native/docs/stylesheet) API.
 
-#### Example
+### Example
 
 ```typescript
 const styles = {

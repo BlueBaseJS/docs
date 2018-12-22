@@ -4,5 +4,5 @@ BlueBase comes with a built-in app configuration system. This is a registry wher
 
 ## Subscribing to Config updates
 
-It is also possible to subscribe to 
+It is also possible to subscribe to
 

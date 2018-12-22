@@ -35,7 +35,7 @@ this command creates a build/storybook-native directory and generates necessary 
 
 ## Customizations
 
-#### App.js
+### App.js
 
 User can add his own custom App.js under bluerain/storybook-native directory. So whenever any App.js file found under this directory, It will be the one getting used while running storybook-native:start command instead of the files generated under bluerain/storybook-native/storybook directory.
 

@@ -9,10 +9,10 @@ The easiest way to install themes in BlueBase is to import your theme into the `
 ```typescript
 const bootOptions = {
 
-	themes: [
-		import('path/to/theme-1'),
-		import('path/to/theme-2'),
-	]
+    themes: [
+        import('path/to/theme-1'),
+        import('path/to/theme-2'),
+    ]
 };
 
 export default bootOptions;
@@ -22,7 +22,7 @@ export default bootOptions;
 
 This method is especially useful if you're developing a theme or have a custom theme in your project.
 
-But this is not how other developers may distribute their themes. As some themes may come with their components, configs, and other customisations. 
+But this is not how other developers may distribute their themes. As some themes may come with their components, configs, and other customisations.
 
 Another problem with this method is that these themes cannot be disabled, while themes installed by plugins get disabled when plugins are disabled.
 

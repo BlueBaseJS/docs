@@ -6,20 +6,20 @@ BlueBase supports different types of theme customisation requirements so that a 
 
 There may be use cases where you may need to keep specific values same, n matter which theme is selected, i.e. primary colours, etc.
 
-To do this, use the `theme.overrides` config. This change is global, and overrides all installed themes.
+To do this, use the `theme.overrides` config. This change is global, and overrides all installed themes.
 
 {% code-tabs %}
 {% code-tabs-item title="bluebase.ts" %}
 ```typescript
 const bootOptions = {
 
-	configs: {
-		'theme.overrides': {
-			components: {
-				// component styles
-			}
-		}
-	},
+    configs: {
+        'theme.overrides': {
+            components: {
+                // component styles
+            }
+        }
+    },
 };
 
 export default bootOptions;
@@ -50,16 +50,16 @@ It is possible to nest multiple themes in a single project. To theme a specific 
 
 ```jsx
 <BB.Components.View>
-	<BB.Components.Text>Default light theme here</BB.Components.Text>
-	<ThemeProvider theme="bluebase-dark">
-		<BB.Components.View style={{ backgroundColor: theme.palette.background.default }}>
-			<BB.Components.Text>Dark theme here</BB.Components.Text>
-		</BB.Components.View>
-	</ThemeProvider>
+    <BB.Components.Text>Default light theme here</BB.Components.Text>
+    <ThemeProvider theme="bluebase-dark">
+        <BB.Components.View style={{ backgroundColor: theme.palette.background.default }}>
+            <BB.Components.Text>Dark theme here</BB.Components.Text>
+        </BB.Components.View>
+    </ThemeProvider>
 <BB.Components.View>
 ```
 
- In the example above, we pass the `theme` prop to the `ThemeProvider` component. This prop takes the key of the theme to use for children components. If this prop is not set, the globally selected theme is used.
+In the example above, we pass the `theme` prop to the `ThemeProvider` component. This prop takes the key of the theme to use for children components. If this prop is not set, the globally selected theme is used.
 
 ### Overriding Themes
 
@@ -67,9 +67,7 @@ The `ThemeProvider` component can also be used to override a theme for a one tim
 
 ```jsx
 <ThemeProvider theme="bluebase-dark" overrides={{ palette: { background: { default: 'red' } } }} >
-	{/* All components here will now have a red background color */}
+    {/* All components here will now have a red background color */}
 </ThemeProvider>
 ```
-
-
 

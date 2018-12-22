@@ -13,7 +13,7 @@ A BlueRain module is any piece of code that:
 
 ## Module Types
 
-A challenge we faced in the earlier versions was the different module types in the Javascript ecosystem. We decided back then that BlueRain must support these out of the box. 
+A challenge we faced in the earlier versions was the different module types in the Javascript ecosystem. We decided back then that BlueRain must support these out of the box.
 
 BlueRain supports both Common JS and ES modules. We do this by checking `.default` property on the imported modules.
 

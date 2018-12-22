@@ -7,7 +7,7 @@
 * [📲 Quick Start](overview/quick-start.md)
 * [🎛 Configuration with bluerain.js](overview/configuration-with-bluerain.js.md)
 * [🎡 Lifecycle Events](overview/lifecycle-event.md)
-* [🛣 Roadmap](overview/readme.md)
+* [🛣 Roadmap](overview/overview.md)
 
 ## Key Concepts
 
