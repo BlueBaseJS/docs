@@ -11,10 +11,18 @@ You can add support for any logging service provider by using the following logg
 ## Example
 
 ```typescript
-await BB.Hooks.register('bluebase.logger.log', {
-    name: 'logger-plugin',
-    handler: (message: string, data: any) => {
-        // send data to analytics provider here
+import { createPlugin } from '@bluebase/core';
+​
+export const LoggerPlugin = createPlugin({
+​
+    key: 'logger',
+    name: 'Logger Plugin',
+    categories: ['logging'],
+    
+    hooks: {
+        'bluebase.logger.log': (message: string, data: any) => {
+            // send data to logging provider here
+        }
     }
 });
 ```

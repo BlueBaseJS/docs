@@ -3,10 +3,18 @@
 You can add support for any analytics service provider by using the `bluebase.analytics.track` hook.
 
 ```typescript
-await BB.Hooks.register('bluebase.analytics.track', {
-    name: 'analytics-plugin',
-    handler: (data: AnalyticTrackData) => {
-        // send data to analytics provider here
+import { createPlugin } from '@bluebase/core';
+​
+export const AnalyticsPlugin = createPlugin({
+​
+    key: 'analytics',
+    name: 'Analytics Plugin',
+    categories: ['analytics'],
+    
+    hooks: {
+        'bluebase.analytics.track': (data: AnalyticsTrackData) => {
+            // send data to analytics provider here
+        }
     }
 });
 ```
