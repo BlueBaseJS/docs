@@ -49,14 +49,14 @@ Using the `ThemeProvider` overrides prop. This change is only for this tree.
 It is possible to nest multiple themes in a single project. To theme a specific portion of your app, use the `ThemeProvider` component.
 
 ```jsx
-<BB.Components.View>
-    <BB.Components.Text>Default light theme here</BB.Components.Text>
+<View>
+    <Text>Default light theme here</Text>
     <ThemeProvider theme="bluebase-dark">
-        <BB.Components.View style={{ backgroundColor: theme.palette.background.default }}>
-            <BB.Components.Text>Dark theme here</BB.Components.Text>
-        </BB.Components.View>
+        <View style={{ backgroundColor: theme.palette.background.default }}>
+            <Text>Dark theme here</Text>
+        </View>
     </ThemeProvider>
-<BB.Components.View>
+<View>
 ```
 
 In the example above, we pass the `theme` prop to the `ThemeProvider` component. This prop takes the key of the theme to use for children components. If this prop is not set, the globally selected theme is used.

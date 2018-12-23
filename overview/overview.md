@@ -7,13 +7,10 @@ The following features will be added in upcoming releases:
 * [Route Registry](https://github.com/BlueEastCode/bluerain/issues/1)
 * [Asset Registry](https://github.com/BlueEastCode/bluerain/issues/2)
 * [Intl Registry](https://github.com/BlueEastCode/bluerain/issues/3)
-* [Theme Registry](https://github.com/BlueEastCode/bluerain/issues/6)
 * [New Store API](https://github.com/BlueEastCode/bluerain/issues/4)
-* [Analytics API](https://github.com/BlueEastCode/bluerain/issues/5)
 * [SSR API](https://github.com/BlueEastCode/bluerain/issues/8)
 * [Cache Hook Results](https://github.com/BlueEastCode/bluerain/issues/10)
 * [Memoize Components](https://github.com/BlueEastCode/bluerain/issues/9)
-* [Improve Stateful Component](https://github.com/BlueEastCode/bluerain/issues/7)
 
 ## Future documentation Articles:
 
@@ -31,10 +28,9 @@ The following features will be added in upcoming releases:
 
 ### Guides
 
-* ✂️ Code Splitting
 * 🔥 Hot Module Replacement
 * 🌏 Server Side Rendering
-* 🈯️ Internationalization
+* 🈯️ Internationalisation
 * 🚀 GraphQL integration
 * 🚨 Error Reporting
 * 📈 Analytics
@@ -56,9 +52,6 @@ The following features will be added in upcoming releases:
 
 ### System API
 
-* 📈 Analytics
-* 📔 Logger
-* 🔌 Plugin
 * ☔️ BlueRain Context
 
 ### Component API

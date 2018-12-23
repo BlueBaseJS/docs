@@ -34,7 +34,14 @@ const ThemedComponent = () => (
 The following example shows how to use `ThemeConsumer` component to create a theme picker. This renders a picker component with a list of all installed themes. It not only uses the current theme to style itself, but also utilises the `changeTheme` method to switch themes.
 
 ```typescript
-import { BlueBase, BlueBaseContext, ThemeConsumer, ThemeContextData } from '@bluebase/core';
+import {
+    BlueBase,
+    BlueBaseContext,
+    ThemeConsumer,
+    ThemeContextData,
+    Text,
+    View,
+} from '@bluebase/core';
 import { Picker } from 'react-native';
 import React from 'react';
 
@@ -43,19 +50,19 @@ export class ThemePicker extends React.PureComponent {
     static contextType = BlueBaseContext;
 
     render() {
-        const BB: BlueBase = (this as any).context;
+        const BB: BlueBase = this.context;
         const themes = [...BB.Themes.entries()];
         return (
             <ThemeConsumer children={({ theme, changeTheme }: ThemeContextData) => (
-                <BB.Components.View style={{ backgroundColor: theme.palette.background.default }}>
-                    <BB.Components.Text>Select Theme</BB.Components.Text>
+                <View style={{ backgroundColor: theme.palette.background.default }}>
+                    <Text>Select Theme</Text>
                     <Picker
                         selectedValue={BB.Configs.getValue('theme.name')}
                         style={{ width: 150 }}
                         onValueChange={changeTheme}>
                         {themes.map(entry => <Picker.Item label={entry[1].name} value={entry[0]} key={entry[0]} />)}
                     </Picker>
-                </BB.Components.View>
+                </View>
             )} />
         );
     }

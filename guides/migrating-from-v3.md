@@ -98,7 +98,7 @@ In V3 a hook handler function could receive any number of arguments. This has be
 + BR.Hooks.run('movies.edit', movie, { actors, collections });
 ```
 
-More details of about the arguments passed to the [handler function](../key-concepts/hooks.md#handler-function) can be found here.
+More details of about the arguments passed to the [handler function](../key-concepts/hooks/#handler-function) can be found here.
 
 ## Plugins
 

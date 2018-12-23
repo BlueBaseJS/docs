@@ -5,7 +5,7 @@
 ## Overview
 
 * [📲 Quick Start](overview/quick-start.md)
-* [🎛 Configuration with bluerain.js](overview/configuration-with-bluerain.js.md)
+* [🎛 Configuration with bluebase.js](overview/configuration-with-bluerain.js.md)
 * [🎡 Lifecycle Events](overview/lifecycle-event.md)
 * [🛣 Roadmap](overview/overview.md)
 
@@ -18,8 +18,17 @@
   * [Developing an Analytics Plugin](key-concepts/plugins/developing-an-analytics-plugin.md)
   * [Developing a Logger Plugin](key-concepts/plugins/developing-a-logger-plugin.md)
   * [Developing a Theme Plugin](key-concepts/plugins/developing-a-theme-plugin.md)
-* [🎣 Hooks](key-concepts/hooks.md)
-* [🎁 Components](key-concepts/components.md)
+* [🎣 Hooks](key-concepts/hooks/README.md)
+  * [Hooks API](key-concepts/hooks/hooks-api.md)
+  * [Registering a Hook](key-concepts/hooks/registering-a-hook.md)
+  * [Deleting a Hook](key-concepts/hooks/deleting-a-hook.md)
+  * [Executing a Hook](key-concepts/hooks/executing-a-hook.md)
+  * [Code Splitting](key-concepts/hooks/code-splitting.md)
+* [🎁 Components](key-concepts/components/README.md)
+  * [Components API](key-concepts/components/components-api.md)
+  * [Registering a Component](key-concepts/components/registering-a-component.md)
+  * [Accessing Components](key-concepts/components/accessing-components.md)
+  * [Higher Order Components](key-concepts/components/higher-order-components.md)
 * [🎨 Themes](key-concepts/themes/README.md)
   * [Installation](key-concepts/themes/installation.md)
   * [Consuming Selected Theme](key-concepts/themes/consuming-selected-theme.md)
@@ -34,10 +43,11 @@
 
 * [📈 Analytics](api/analytics.md)
 * [📔 Logger](api/logger.md)
-* [📦 BlueRain Modules](api/bluerain-modules.md)
+* [📦 BlueBase Modules](api/bluerain-modules.md)
 
 ## Guides
 
+* [✂️ Code Splitting](guides/code-splitting.md)
 * [🗿 Icons](guides/icons.md)
 * [🛂 Migrating from V3](guides/migrating-from-v3.md)
 
