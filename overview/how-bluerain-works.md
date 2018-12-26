@@ -1,2 +1,2 @@
-# 🏋️‍♀️ How BlueRain works
+# 🏋️‍♀️ How BlueBase works
 

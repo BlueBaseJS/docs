@@ -9,7 +9,7 @@
 * [🎡 Lifecycle Events](overview/lifecycle-event.md)
 * [🧠 Thinking in BlueBase](overview/thinking-in-bluebase.md)
 * [⛩ Main App Layout](overview/main-app-layout.md)
-* [🏋️‍♀️ How BlueRain works](overview/how-bluerain-works.md)
+* [🏋️‍♀️ How BlueBase works](overview/how-bluerain-works.md)
 * [🛣 Roadmap](overview/overview.md)
 
 ## Key Concepts
