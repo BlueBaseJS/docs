@@ -56,10 +56,12 @@
 
 ## Components
 
+* [ActivityIndicator](components/activityindicator.md)
 * [BlueBase](components/bluebase/README.md)
   * [BlueBaseApp 📌](components/bluebase/bluebaseapp.md)
   * [BlueBaseConsumer 📌](components/bluebase/bluebaseconsumer.md)
   * [BlueBaseHook 📌](components/bluebase/bluebasehook.md)
+* [Button](components/button.md)
 * [ComponentState 📌](components/componentstate.md)
 * [EmptyState 📌](components/emptystate.md)
 * [ErrorState 📌](components/errorstate.md)
@@ -77,6 +79,7 @@
   * [WaitObserver 📌](components/observers/waitobserver.md)
 * [StatefulComponent 📌](components/statefulcomponent.md)
 * [Typography](components/typography.md)
+* [View](components/view.md)
 
 ## CLI
 
