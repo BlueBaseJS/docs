@@ -13,6 +13,9 @@ This component is shipped with BlueBase Core.
 ## Usage
 
 ```jsx
+import { JsonSchema } from '@bluebase/core';
+
+// Then somewhere in your app:
 <JsonSchema
     hook="content-hook"
     args={{ style: { color: 'blue' } }}
@@ -24,8 +27,7 @@ This component is shipped with BlueBase Core.
          }
      },
      text: 'This is the page content.',
- }
-} />
+ }} />
 ```
 
 ## Properties

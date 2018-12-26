@@ -5,7 +5,7 @@
 The first step to get started is to install BlueBase CLI as a global dependency.
 
 ```text
-yarn global add @blueeast/bluerain-cli
+yarn global add @bluebase/cli
 ```
 
 ## Install Target Platform CLI Plugin
@@ -15,19 +15,19 @@ Next, you need to install the desired target platform plugin of BlueBase CLI. Th
 {% tabs %}
 {% tab title="Web" %}
 ```text
-bluerain plugins:add @blueeast/bluerain-cli-web
+bluerain plugins:add @bluebase/cli-web
 ```
 {% endtab %}
 
 {% tab title="Expo \(iOS & Android\)" %}
 ```bash
-bluerain plugins:add @blueeast/bluerain-cli-expo
+bluerain plugins:add @bluebase/cli-expo
 ```
 {% endtab %}
 
 {% tab title="Electron \(Windows, Linux & macOS\)" %}
 ```text
-bluerain plugins:add @blueeast/bluerain-cli-electron
+bluerain plugins:add @bluebase/cli-electron
 ```
 {% endtab %}
 {% endtabs %}
@@ -39,19 +39,19 @@ Start the project in development mode.
 {% tabs %}
 {% tab title="Web" %}
 ```text
-bluerain web:start
+bluebase web:start
 ```
 {% endtab %}
 
 {% tab title="Expo \(iOS & Android\)" %}
 ```bash
-bluerain expo:start
+bluebase expo:start
 ```
 {% endtab %}
 
 {% tab title="Electron \(Windows, Linux & macOS\)" %}
 ```text
-bluerain electron:start
+bluebase electron:start
 ```
 {% endtab %}
 {% endtabs %}

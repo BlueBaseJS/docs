@@ -1,8 +1,8 @@
 # BlueBaseApp 📌
 
-The main BlueBase app. This is the top level component that takes care of initialisation, and renders either children, or it's own views with routing.
+This is the main app in the BlueBase framework. It is just a React Component, and can either be used as the top most component of your project or it can be embedded in your existing code base.
 
-As BlueBaseApp is just a react component, it is possible for 
+This component takes care of initialisation and renders the [⛩Main App Layout](../../overview/main-app-layout.md). If children prop is provided, then it renders the children prop instead of the Main App Layout.
 
 {% hint style="info" %}
 #### System Component 📌
@@ -12,7 +12,7 @@ This component is shipped with BlueBase Core.
 
 ## Usage
 
-Use BlueBase by passing 
+Use it just like any other react component.
 
 ```jsx
 import { BlueBase, BlueBaseApp } from '@bluebase/core';
@@ -30,6 +30,10 @@ export const App = () => (
 
 ### Custom Context
 
+Sometimes, you may want to use custom context. This is especially important when some system functionality may need to be modified before the boot process.
+
+Just create a new object of BlueBase class. And send pass it to the BlueBaseApp component as `BB` prop when ready.
+
 ```jsx
 import { BlueBase, BlueBaseApp } from '@bluebase/core';
 
@@ -42,7 +46,7 @@ export const App = () => (<BlueBaseApp BB={BB} />);
 
 ### Children
 
-
+If children are provided to this component, then the children node is rendered instead of [⛩Main App Layout](../../overview/main-app-layout.md). The child components can use [BlueBaseConsumer](bluebaseconsumer.md) to access BlueBase context. 
 
 ```jsx
 import { BlueBase, BlueBaseApp } from '@bluebase/core';

@@ -7,6 +7,9 @@
 * [📲 Quick Start](overview/quick-start.md)
 * [🎛 Configuration with bluebase.js](overview/configuration-with-bluerain.js.md)
 * [🎡 Lifecycle Events](overview/lifecycle-event.md)
+* [🧠 Thinking in BlueBase](overview/thinking-in-bluebase.md)
+* [⛩ Main App Layout](overview/main-app-layout.md)
+* [🏋️‍♀️ How BlueRain works](overview/how-bluerain-works.md)
 * [🛣 Roadmap](overview/overview.md)
 
 ## Key Concepts
@@ -53,8 +56,10 @@
 
 ## Components
 
-* [BlueBaseApp 📌](components/bluebaseapp.md)
-* [BlueBaseHook 📌](components/bluebasehook.md)
+* [BlueBase](components/bluebase/README.md)
+  * [BlueBaseApp 📌](components/bluebase/bluebaseapp.md)
+  * [BlueBaseConsumer 📌](components/bluebase/bluebaseconsumer.md)
+  * [BlueBaseHook 📌](components/bluebase/bluebasehook.md)
 * [ComponentState 📌](components/componentstate.md)
 * [EmptyState 📌](components/emptystate.md)
 * [ErrorState 📌](components/errorstate.md)

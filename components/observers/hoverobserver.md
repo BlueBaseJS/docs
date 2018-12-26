@@ -10,7 +10,7 @@ Initial code taken from: [https://github.com/ethanselzer/react-hover-observer](h
 This component is shipped with BlueBase Core.
 {% endhint %}
 
-### Usage
+## Usage
 
 ```jsx
 <HoverObserver>
@@ -20,7 +20,9 @@ This component is shipped with BlueBase Core.
 </HoverObserver>
 ```
 
-
+{% hint style="info" %}
+`isHovering` is always false on Android or iOS.
+{% endhint %}
 
 ## Properties
 
@@ -33,6 +35,6 @@ This component is shipped with BlueBase Core.
 | onMouseLeave | _Function_ | _no_ | - | Defaults to unsetting isHovering. |
 | onMouseOver | _Function_ | _no_ | - |  |
 | onMouseOut | _Function_ | _no_ | - |  |
-| children | ReactNode \| \(_HoverObserverState_\) =&gt; ReactNode | _no_ | - |  |
-| testID | string | _no_ | - | Used to locate this view in end-to-end tests. |
+| children | _ReactNode \| \(HoverObserverState\) =&gt; ReactNode_ | _no_ | - |  |
+| testID | _string_ | _no_ | - | Used to locate this view in end-to-end tests. |
 

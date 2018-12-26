@@ -1,8 +1,8 @@
 # BlueBaseHook 📌
 
-Since hooks in BlueBase are based on promises, it may be tedious to handle loading state, error state, etc. It may also become a repetitive task.
+As hooks in BlueBase are based on promises, it may be tedious to handle loading state, error state, etc. Not to mention that it may also become a repetitive task.
 
-To solve this issue, we ship BlueBaseHook component. Just pass name of hook, initial value, and hook arguments as props. The final hooked value will be passed to the children function. This component will handle loading and error states itself.
+To solve this issue, we ship `BlueBaseHook` component. Just pass name of hook, initial value, and hook arguments as props. The final hooked value will be passed to the children function. This component will handle loading and error states itself.
 
 {% hint style="info" %}
 #### System Component 📌
@@ -13,6 +13,9 @@ This component is shipped with BlueBase Core.
 ## Usage
 
 ```jsx
+import { BlueBaseHook } from '@bluebase/core';
+
+// Then somewhere in your app:
 <BlueBaseHook hook="math" value={5} args={{ op: 'add' }}>
 {(val: number) => (<Text>{val}</Text>)}
 </BlueBaseHook>

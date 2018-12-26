@@ -11,6 +11,9 @@ This component is shipped with BlueBase Core.
 ## Usage
 
 ```jsx
+import { EmptyState } from '@bluebase/core';
+
+// Then somewhere in your app:
 <EmptyState/>
 ```
 

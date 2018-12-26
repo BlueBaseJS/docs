@@ -13,19 +13,17 @@ A use case for this can be to show a loading state after waiting a certain perio
 This component is shipped with BlueBase Core.
 {% endhint %}
 
-### Usage
+## Usage
 
 ```jsx
 <WaitObserver
- delay={1000}
- timeout={3000}
- onTimeout={onTimeout}
- onRetry={onRetry}
- children={(props: WaitObserverChildrenProps) => <LoadingState {...props} />}
+    delay={1000}
+    timeout={3000}
+    onTimeout={onTimeout}
+    onRetry={onRetry}
+    children={(props: WaitObserverChildrenProps) => <LoadingState {...props} />}
 />
 ```
-
-
 
 ## Properties
 

@@ -8,15 +8,13 @@ This is a swiss army knife component. Intended to be used as a single source of 
 This component is shipped with BlueBase Core.
 {% endhint %}
 
-### Usage
+## Usage
 
 ```jsx
 <StatefulComponent data={data} loading={true} delay={200} timeout={10000}>
  <Text>Content</Text>
 </StatefulComponent>
 ```
-
-
 
 ## Properties
 

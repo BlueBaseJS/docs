@@ -19,6 +19,9 @@ This component is shipped with BlueBase Core.
 The following example shows how to use [BlueBase Icon](icon-1.md) component:
 
 ```jsx
+import { DynamicIcon } from '@bluebase/core';
+
+// Then somewhere in your app:
 <DynamicIcon
     type="icon"
     size={250}

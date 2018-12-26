@@ -8,17 +8,13 @@ Observes any exceptions in child tree hierarchy. When an exception is caught, di
 This component is shipped with BlueBase Core.
 {% endhint %}
 
-### Usage
+## Usage
 
 ```jsx
-<ErrorObserver
- errorComponent={ErrorState}
->
+<ErrorObserver>
  <Text>Rendered if there is no error here</Text>
 </ErrorObserver>
 ```
-
-
 
 ## Properties
 

@@ -11,12 +11,14 @@ This component is shipped with BlueBase Core.
 ## Usage
 
 ```jsx
-<DataObserver>
- <Text>{data}</Text>
+<DataObserver data={dataObj} >
+{
+    ({data, loading, empty}) => {
+        // Render UI based on params
+    }
+}
 </DataObserver>
 ```
-
-
 
 ## Properties
 

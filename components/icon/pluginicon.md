@@ -14,6 +14,9 @@ This component is shipped with BlueBase Core.
 ## Usage
 
 ```jsx
+import { PluginIcon } from '@bluebase/core';
+
+// Then somewhere in your app:
 <PluginIcon id="redux-plugin" />
 ```
 

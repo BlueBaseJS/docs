@@ -14,12 +14,6 @@ The following features will be added in upcoming releases:
 
 ## Future documentation Articles:
 
-### Overview
-
-* 🧠 Thinking in BlueRain
-* ⛩ Main App Structure
-* 🏋️‍♀️ How BlueRain works
-
 ### Key Concepts
 
 * 💥 State Management
