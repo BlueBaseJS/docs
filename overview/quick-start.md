@@ -15,19 +15,19 @@ Next, you need to install the desired target platform plugin of BlueBase CLI. Th
 {% tabs %}
 {% tab title="Web" %}
 ```text
-bluerain plugins:add @bluebase/cli-web
+bluebase plugins:add @bluebase/cli-web
 ```
 {% endtab %}
 
 {% tab title="Expo \(iOS & Android\)" %}
 ```bash
-bluerain plugins:add @bluebase/cli-expo
+bluebase plugins:add @bluebase/cli-expo
 ```
 {% endtab %}
 
 {% tab title="Electron \(Windows, Linux & macOS\)" %}
 ```text
-bluerain plugins:add @bluebase/cli-electron
+bluebase plugins:add @bluebase/cli-electron
 ```
 {% endtab %}
 {% endtabs %}
