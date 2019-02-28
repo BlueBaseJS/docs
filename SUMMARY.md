@@ -61,6 +61,7 @@
   * [BlueBaseApp 📌](components/bluebase/bluebaseapp.md)
   * [BlueBaseConsumer 📌](components/bluebase/bluebaseconsumer.md)
   * [BlueBaseHook 📌](components/bluebase/bluebasehook.md)
+  * [ThemeConsumer 📌](components/bluebase/themeconsumer.md)
 * [Button](components/button.md)
 * [ComponentState 📌](components/componentstate.md)
 * [EmptyState 📌](components/emptystate.md)
