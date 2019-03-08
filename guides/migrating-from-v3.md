@@ -29,31 +29,31 @@ Theres no easy way to say this but... `withBlueRain` HOC is gone! Use `BlueRainC
 We did this to simplify the API and to keep the bundle size in check.
 
 ```diff
-- const Button = withBlueRain(({ BR, ...rest }) => {
--     return <BR.Components.Button {...rest} />;
+- const Button = withBlueRain(({ BB, ...rest }) => {
+-     return <BB.Components.Button {...rest} />;
 - });
 
 + const Button = (props) => (
 +     <BlueBaseConsumer>
-+     {(BR) => <BR.Components.Button {...props} />}
++     {(BB) => <BB.Components.Button {...props} />}
 +     </BlueBaseConsumer>
 + );
 ```
 
 ## No Singleton Instance
 
-In V3 we used a single instance of BlueBase. This instance was exported from the library as `default` and `BR`. This has been removed in the V4. This means:
+In V3 we used a single instance of BlueBase. This instance was exported from the library as `default` and `BB`. This has been removed in the V4. This means:
 
 * Now there is not default export in BlueBase 4.
 * Now there is no single BlueBase instance exported.
 
 This also allows us to use more than one BlueBase apps in a single project.
 
-## Hooks
+## Filters
 
 ### Registry methods
 
-Since registry codebase has been completely revamped, the internal API and methods has changed. So, if you use any of the `BR.Hooks` class methods directly, be sure to check docs for changes.
+Since registry codebase has been completely revamped, the internal API and methods has changed. So, if you use any of the `BB.Filters` class methods directly, be sure to check docs for changes.
 
 Some important changes are listed below:
 
@@ -65,52 +65,52 @@ Some important changes are listed below:
 
 Behavior of set and remove has changed.
 
-* `set` method sets the whole array of all listeners of a hook, as opposed to a single listener.
+* `set` method sets the whole array of all listeners of a filter, as opposed to a single listener.
 
 ### Filter and Event Registries
 
-Hooks in V3 were made of 2 registries:
+Filters in V3 were made of 2 registries:
 
 * FilterRegistry
 * EventRegistry
 
-Both of these have been removed, and we only have a single unified registry now, i.e. HookRegistry.
+Both of these have been removed, and we only have a single unified registry now, i.e. FilterRegistry.
 
-This also means that there are no `BR.Filters` and `BR.Events` properties in BlueBase context anymore.
+This also means that there are no `BB.Filters` and `BB.Events` properties in BlueBase context anymore.
 
-### Running a Hook
+### Running a Filter
 
 #### Return Type
 
-All `BR.Hooks.run` now returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves a value, previously it just returned the value.
+All `BB.Filters.run` now returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves a value, previously it just returned the value.
 
 ```diff
-- modifier = BR.Hooks.run('movies.edit', modifier);
-+ modifier = await BR.Hooks.run('movies.edit', modifier);
+- modifier = BB.Filters.run('movies.edit', modifier);
++ modifier = await BB.Filters.run('movies.edit', modifier);
 ```
 
 #### Arguments in handler function
 
-In V3 a hook handler function could receive any number of arguments. This has been changed and now a hook can only receive 3 fixed arguments.
+In V3 a filter handler function could receive any number of arguments. This has been changed and now a filter can only receive 3 fixed arguments.
 
 ```diff
-- BR.Hooks.run('movies.edit', movie, actors, collections);
-+ BR.Hooks.run('movies.edit', movie, { actors, collections });
+- BB.Filters.run('movies.edit', movie, actors, collections);
++ BB.Filters.run('movies.edit', movie, { actors, collections });
 ```
 
-More details of about the arguments passed to the [handler function](../key-concepts/hooks/#handler-function) can be found here.
+More details of about the arguments passed to the [handler function](../key-concepts/filters/#handler-function) can be found here.
 
 ## Plugins
 
 ### Plugin Structure
 
-There is not `initialize` method in the plugin anymore. Use any of the event hooks.
+There is not `initialize` method in the plugin anymore. Use any of the event filters.
 
-Alternately, use `bluebase.plugins.initialize` hook. But it is not recommended.
+Alternately, use `bluebase.plugins.initialize` filter. But it is not recommended.
 
 ### Registry methods
 
-Since registry codebase has been completely revamped, the internal API and methods has changed. So, if you use any of the `BR.Plugins` class methods directly, be sure to check docs for changes.
+Since registry codebase has been completely revamped, the internal API and methods has changed. So, if you use any of the `BB.Plugins` class methods directly, be sure to check docs for changes.
 
 Some important changes are listed below:
 
@@ -122,24 +122,24 @@ Some important changes are listed below:
 
 Behavior of set and remove has changed.
 
-* `set` method sets the whole array of all listeners of a hook, as opposed to a single listener.
+* `set` method sets the whole array of all listeners of a filter, as opposed to a single listener.
 
 #### initializeAll method
 
-`initializeAll` method has been removed. Use `bluerain.plugins.initialize.all` hook instead.
+`initializeAll` method has been removed. Use `bluerain.plugins.initialize.all` filter instead.
 
 ```diff
-- BR.Plugins.initializeAll();
-+ await BR.Hooks.run('bluerain.plugins.initialize.all', bootOptions);
+- BB.Plugins.initializeAll();
++ await BB.Filters.run('bluerain.plugins.initialize.all', bootOptions);
 ```
 
 #### registerMany method
 
-`registerMany` method has been removed. Use `bluerain.plugins.register` hook instead.
+`registerMany` method has been removed. Use `bluerain.plugins.register` filter instead.
 
 ```diff
-- BR.Plugins.registerMany(plugins);
-+ await BR.Hooks.run('bluerain.plugins.register', bootOptions);
+- BB.Plugins.registerMany(plugins);
++ await BB.Filters.run('bluerain.plugins.register', bootOptions);
 ```
 
 ## Components

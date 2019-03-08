@@ -1,6 +1,6 @@
 # Developing a Logger Plugin
 
-You can add support for any logging service provider by using the following logger hooks:
+You can add support for any logging service provider by using the following logger filters:
 
 * `bluebase.logger.log`
 * `bluebase.logger.info`
@@ -19,7 +19,7 @@ export const LoggerPlugin = createPlugin({
     name: 'Logger Plugin',
     categories: ['logging'],
     
-    hooks: {
+    filters: {
         'bluebase.logger.log': (message: string, data: any) => {
             // send data to logging provider here
         }

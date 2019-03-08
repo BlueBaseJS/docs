@@ -9,7 +9,7 @@ The following features will be added in upcoming releases:
 * [Intl Registry](https://github.com/BlueEastCode/bluerain/issues/3)
 * [New Store API](https://github.com/BlueEastCode/bluerain/issues/4)
 * [SSR API](https://github.com/BlueEastCode/bluerain/issues/8)
-* [Cache Hook Results](https://github.com/BlueEastCode/bluerain/issues/10)
+* [Cache Filter Results](https://github.com/BlueEastCode/bluerain/issues/10)
 * [Memoize Components](https://github.com/BlueEastCode/bluerain/issues/9)
 
 ## Future documentation Articles:

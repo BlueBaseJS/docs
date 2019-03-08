@@ -61,12 +61,12 @@ const ExamplePlugin = {
 }
 ​
 await BB.Plugins.register(ExamplePlugin);
-await BB.Hooks.run('bluebase.plugins.initialize', ExamplePlugin);
+await BB.Filters.run('bluebase.plugins.initialize', ExamplePlugin);
 ```
 
 Beware though, it is important when a plugin is added to the registry in the system lifecycle. Because all plugins must be initiated, adding them to the registry is not enough. 
 
-Plugins are initialised with the `bluebase.plugins.initialize.all` hook, which in turn calls the `bluebase.plugins.initialize` hook for each plugin. So you'll either need to run this hook yourself, or add a plugin before the main hook is executed by the system.
+Plugins are initialised with the `bluebase.plugins.initialize.all` filter, which in turn calls the `bluebase.plugins.initialize` filter for each plugin. So you'll either need to run this filter yourself, or add a plugin before the main filter is executed by the system.
 
 Even so, to avoid unknown issues it is recommended to use the first method \([Through BlueBaseApp Component](register-a-plugin.md#through-bluebaseapp-component)\).
 

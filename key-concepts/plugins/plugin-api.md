@@ -11,7 +11,7 @@ A plugin is just a JavaScript object that has the following properties:
 | `categories` | _string\[\]_ | _no_ | [Plugin Categories](https://github.com/BlueBaseJS/docs/tree/6710d83d9e42436a90100426d36314c69fa496f6/key-concepts/plugins/plugins.md#plugin-categories). |
 | `icon` | _DynamicIconProps_ | _no_ | These are props of the DynamicIcon component. This value can also be a thunk, i.e. a function that should return the props object. This function receives BlueBase context as param. |
 | `enabled` | _boolean_ | _no_ | _\(Default = true\)_ Flag to check if a plugin is enabled. |
-| `hooks` | _HookNestedCollection_ | _no_ |  |
+| `filters` | _FilterNestedCollection_ | _no_ |  |
 | `components` | _ComponentCollection_ | _no_ |  |
 | `themes` | _ThemeCollection_ | _no_ |  |
 | `defaultConfigs` | _ConfigCollection_ | _no_ |  |
@@ -57,7 +57,7 @@ export const ExamplePlugin = createPlugin({
         value: import('./Logo')
     }],
     
-    // ... add other configs, i.e. themes, hooks, etc
+    // ... add other configs, i.e. themes, filters, etc
 });
 ```
 

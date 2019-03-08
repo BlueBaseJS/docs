@@ -21,7 +21,7 @@ export const App = () => (
     <BlueBaseApp
         components={{ /* Components Collection */ }}
         configs={{ /* Configs Collection */ }}
-        hooks={{ /* Hooks Collection */ }}
+        filters={{ /* Filters Collection */ }}
         plugins={{ /* Plugin Collection */ }}
         themes={{ /* Theme Collection */ }}
     />
@@ -39,7 +39,7 @@ import { BlueBase, BlueBaseApp } from '@bluebase/core';
 
 const BB = new BlueBase();
 
-// Custom business logic on BB object. i.e. Add hooks, etc.
+// Custom business logic on BB object. i.e. Add filters, etc.
 
 export const App = () => (<BlueBaseApp BB={BB} />);
 ```
@@ -67,7 +67,7 @@ export const App = () => (
 | children | number | _no_ | - | If this prop is provided, BlueBase's own App view will not be rendered, and nodes in this prop will be rendered instead. |
 | components | ComponentCollection | _no_ | - | Collection of components to add in BlueBase's Component Registry. |
 | configs | ConfigCollection | _no_ | - | Collection of configs to add in BlueBase's Config Registry. |
-| hooks | HookNestedCollection | _no_ | - | Collection of Hook to add in BlueBase's Hook Registry. |
+| filters | FilterNestedCollection | _no_ | - | Collection of Filter to add in BlueBase's Filter Registry. |
 | plugins | PluginCollection | _no_ | - | Collection of plugins to add in BlueBase's Plugin Registry. |
 | themes | ThemeCollection | _no_ | - | Collection of themes to add in BlueBase's Theme Registry. |
 | testID | string | _no_ | - | Used to locate this view in end-to-end tests. |

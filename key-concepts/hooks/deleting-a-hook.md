@@ -1,9 +1,9 @@
-# Deleting a Hook
+# Deleting a Filter
 
-Hook Listeners can be deleted through the `BR.Hooks.delete` function:
+Filter Listeners can be deleted through the `BB.Filters.delete` function:
 
 ```typescript
-BB.Hooks.delete('posts.edit', 'setEditedAt');
+BB.Filters.delete('posts.edit', 'setEditedAt');
 ```
 
 

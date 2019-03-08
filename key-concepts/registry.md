@@ -6,7 +6,7 @@ BlueBase uses an internal data structure to store everything.
 | :--- | :--- | :--- |
 | Component | hocs, source, styles, isAsync, preload | BlueBaseModule&lt;React.Component&gt; |
 | Config | subscriptions | BlueBaseModule&lt;any&gt; ⁉️ |
-| Hook | name, priority | BlueBaseModule&lt;Handler&gt; |
+| Filter | name, priority | BlueBaseModule&lt;Handler&gt; |
 | Intl ⁉️ |  | BlueBaseModule&lt;string&gt; |
 | Plugin |  | BlueBaseModule&lt;Plugin&gt; |
 | Route ⁉️ |  |  |

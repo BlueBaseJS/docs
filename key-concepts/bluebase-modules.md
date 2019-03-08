@@ -32,12 +32,12 @@ The table below list where BlueBase Modules are used internally, and their behav
 | Type | Maybe ES Module | Maybe Promise | Must be resolved at boot? |
 | :--- | :--- | :--- | :--- |
 | Plugin | Yes | Yes | Yes |
-| Hook | Yes | Yes | Yes |
+| Filter | Yes | Yes | Yes |
 | Routes | Yes | Yes | Yes |
 | Components | Yes | Yes | No |
 | Assets | No | Yes | No |
 | Theme | Yes | Yes | No |
 | Intl | Yes | Yes | No |
 
-Hooks may have individual listeners as promises too.
+Filters may have individual listeners as promises too.
 

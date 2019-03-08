@@ -2,12 +2,12 @@
 
 ## BlueBase Boot Lifecycle Events
 
-* **`bluebase.boot`** **Internal Hook:** `bluebase-boot-default` _\(Priority = 5\)_  
+* **`bluebase.boot`** **Internal Filter:** `bluebase-boot-default` _\(Priority = 5\)_  
   * bluebase.boot.start
     * bluebase.components.register.internal
   * bluebase.configs.load
   * bluebase.components.register
-  * bluebase.hooks.register
+  * bluebase.filters.register
   * bluebase.routes.register
   * bluebase.plugins.register
   * bluebase.plugins.initialize.all

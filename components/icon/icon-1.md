@@ -1,6 +1,6 @@
 # Icon
 
-BR.Components.Icon
+BB.Components.Icon
 
 {% hint style="danger" %}
 #### Not a System Component 📌

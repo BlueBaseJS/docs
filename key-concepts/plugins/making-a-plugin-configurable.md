@@ -18,7 +18,7 @@ export const ExamplePlugin = createPlugin({
         'plugin.example.foo': 'bar'
     },
 
-    // ... add other configs, i.e. themes, hooks, etc
+    // ... add other configs, i.e. themes, filters, etc
 });
 ```
 

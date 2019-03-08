@@ -6,6 +6,6 @@ Please refer to the following links in the docs to learn how code splitting work
 
 * Plugins
 * Components
-* [Hooks](../key-concepts/hooks/code-splitting.md)
+* [Filters](../key-concepts/filters/code-splitting.md)
 * Themes
 
