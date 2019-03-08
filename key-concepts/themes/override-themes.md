@@ -4,7 +4,7 @@ BlueBase supports different types of theme customisation requirements so that a 
 
 ## Override all themes
 
-There may be use cases where you may need to keep specific values same, n matter which theme is selected, i.e. primary colours, etc.
+There may be use cases where you may need to keep specific values same, no matter which theme is selected, i.e. primary colours, etc.
 
 To do this, use the `theme.overrides` config. This change is global, and overrides all installed themes.
 
@@ -29,13 +29,32 @@ export default bootOptions;
 
 ## Specific variation, global usage
 
-Extend a theme
+BlueBase ships with two built-in themes: `BlueBase Light` & `BlueBase Dark`. You can extend any of the two to create you own theme.
 
+{% code-tabs %}
+{% code-tabs-item title="MyCustomTheme.ts" %}
 ```typescript
-import { createTheme } from '@bluebase/core';
+import { buildTheme } from '@bluebase/core';
 
-// ... TODO: current api may change
+export const MyCustomTheme = ('light')({
+    name: 'MyCustomTheme',
+    key: 'my-custom-theme',
+    // ... theme props
+});
 ```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title="App.ts" %}
+```typescript
+import { BlueBaseApp } from '@bluebase/core';
+import { MyCustomTheme } from './MyCustomTheme.ts';
+
+export const App = () => (
+    <BlueBaseApp themes={[MyCustomTheme]} />
+);
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ## Specific variation, one time usage
 
