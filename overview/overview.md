@@ -43,6 +43,7 @@ The following features will be added in upcoming releases:
 * 🏗 Layouts
 * 🍱 JSON Components
 * 🏛 Grid & Responsive Components
+* 🏛 FavIcon
 
 ### System API
 
