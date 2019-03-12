@@ -52,6 +52,8 @@
 
 * [✂️ Code Splitting](guides/code-splitting.md)
 * [🗿 Icons](guides/icons.md)
+* [⚡️ Progressive Web Apps](guides/pwa.md)
+* [⚡🏛 FavIcon](guides/favicon.md)
 * [🛂 Migrating from V3](guides/migrating-from-v3.md)
 
 ## Components
