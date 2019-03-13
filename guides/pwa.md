@@ -1,18 +1,19 @@
 # Progressive Web App Support
 
-**Plugin Info:**
-We are using [workbox](https://developers.google.com/web/tools/workbox/guides/get-started) to fully equipped your app with PWA features.
+## Plugin Info
 
-##Getting Started
+[Workbox](https://developers.google.com/web/tools/workbox/guides/get-started) is a set of libraries and Node modules that make it easy to cache assets and take full advantage of features used to build Progressive Web Apps. Workbox provide differnt modes to enable PWA like CLI, Node Module and webpack. We are using (workbox-webpack-plugin)
 
-PWA mode is enabled by default. All you have to do is to host the *sw.js* file genearted in your dist to the root of your site and its done. You can verify the registered service worker from application tab in chrome developer tools.
+## **Basic Usage**
 
-Talking about the caching strategy, Bluebase has one of the recommended caching strategy by workbox built-in for you.
+PWA mode is enabled by default. All you have to do is host the *sw.js* file genearted in your dist to the root of your site and its done. You can verify the registered service worker from the application tab in chrome developer tools.
 
-###Implmented Caching Strategy:
+Talking about the caching strategy, Bluebase has one of the recommended caching strategy by workbox built-in for you. The below strategy is just for understating the cache rules currently implemented, you don't have to add these anywhere :)
+
+### Implmented Caching Strategy
 
 **Google Fonts**
-
+```JS
 // Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.googleapis\.com/,
@@ -37,9 +38,10 @@ workbox.routing.registerRoute(
     ],
   })
 );
+```
 
 **Caching Images**
-
+```JS
 workbox.routing.registerRoute(
   /\.(?:png|gif|jpg|jpeg|svg)$/,
   new workbox.strategies.CacheFirst({
@@ -52,15 +54,102 @@ workbox.routing.registerRoute(
     ],
   })
 );
+```
 
 **Cache CSS and JavaScript Files**
-
+```JS
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: 'static-resources',
   })
 );
+```
+
+### The above is enough for you to get going with service workers but if you want to add another cache rule to existing config or you want to replace the built-in rules, you can do that.
 
 
+## **Advanced Usage**
 
+Configuration File path => *./bluebase/web/client.config.ts*
+
+### Default implementation
+
+```JS
+export default function (input: any) {
+	return input;
+}
+```
+
+### Change Existing Config
+
+```JS
+export default function (input: any) {
+	input.workBox.config.runtimeCaching.push({
+   {
+        // Match any request ends with .png, .jpg, .jpeg or .svg.
+        urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+        // Apply a cache-first strategy.
+        handler: 'CacheFirst',
+
+        options: {
+          // Use a custom cache name.
+          cacheName: 'images',
+
+          // Only cache 10 images.
+          expiration: {
+            maxEntries: 10,
+          },
+        },
+      } 
+  })
+  return input;
+}
+```
+
+### Custom configs
+### Configuration Options can be found **[here](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#full_generatesw_config)**
+Below is a sample with an exclude option and a runtime caching strategy.
+
+
+```JS
+export default function (input: any) {
+  input.workbox.config = {
+      // Exclude images from the precache
+      exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+
+      // Define runtime caching rules.
+      runtimeCaching: [{
+        // Match any request ends with .png, .jpg, .jpeg or .svg.
+        urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+        // Apply a cache-first strategy.
+        handler: 'CacheFirst',
+
+        options: {
+          // Use a custom cache name.
+          cacheName: 'images',
+
+          // Only cache 10 images.
+          expiration: {
+            maxEntries: 10,
+          },
+        },
+      }],
+    }
+    return input;
+}
+```
+
+
+## Disable PWA
+
+Believe me that is the last thing you want to do :(
+
+  ```JS
+  export default function (input: any) {
+	  input.workbox.disable = true
+    return input;
+  }
+  ```
