@@ -2,7 +2,7 @@
 
 ## Plugin Info
 
-[Workbox](https://developers.google.com/web/tools/workbox/guides/get-started) is a set of libraries and Node modules that make it easy to cache assets and take full advantage of features used to build Progressive Web Apps. Workbox provide differnt modes to enable PWA like CLI, Node Module and webpack. We are using (workbox-webpack-plugin)
+[Workbox](https://developers.google.com/web/tools/workbox/guides/get-started) is a set of libraries and Node modules that make it easy to cache assets and take full advantage of features used to build Progressive Web Apps. Workbox provide differnt modes to enable PWA like CLI, Node Module and webpack. We are using [workbox-webpack-plugin](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin)
 
 ## **Basic Usage**
 
@@ -66,7 +66,7 @@ workbox.routing.registerRoute(
 );
 ```
 
-### The above is enough for you to get going with service workers but if you want to add another cache rule to existing config or you want to replace the built-in rules, you can do that.
+ The above is enough for you to get going with service workers but if you want to add another cache rule to existing config or you want to replace the built-in rules, you can do that.
 
 
 ## **Advanced Usage**
@@ -109,7 +109,8 @@ export default function (input: any) {
 ```
 
 ### Custom configs
-### Configuration Options can be found **[here](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#full_generatesw_config)**
+ Full configuration options can be found **[here](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#full_generatesw_config)**
+
 Below is a sample with an exclude option and a runtime caching strategy.
 
 
