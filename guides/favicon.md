@@ -1,4 +1,4 @@
-# Favicon
+# 🏛 Favicon
 
 
 BlueBase is using **[favicons-webpack-plugin@0.0.9](https://github.com/jantimon/favicons-webpack-plugin)** for this purpose. Current implementation will generate the favicons in your dist picking up the icon.png file from the "assets" folder followed up by the subfolder "web". The Favicons' links will be injected in the final index.html.
