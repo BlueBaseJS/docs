@@ -1,3 +1,6 @@
 # 🔥 Hot Module Replacement
 
-Bluebase features Hot Module Replacement out-of-the-box. we are using react-hot-reload and webpack-hot-client for this purpose.
+BlueBase features Hot Module Replacement out-of-the-box, and requires no additional configuration.
+
+On web, we use [react-hot-loader](https://github.com/gaearon/react-hot-loader) and [webpack-hot-client](https://github.com/webpack-contrib/webpack-hot-client), while react-native has built-in support. 
+

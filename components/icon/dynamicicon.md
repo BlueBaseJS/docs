@@ -83,7 +83,7 @@ It is also possible to use a component registered in the ComponentRegistry by us
   <tbody>
     <tr>
       <td style="text-align:left">type</td>
-      <td style="text-align:left">'component' | 'icon' | 'image'</td>
+      <td style="text-align:left">&apos;component&apos; | &apos;icon&apos; | &apos;image&apos;</td>
       <td style="text-align:left"><em>yes</em>
       </td>
       <td style="text-align:left">-</td>
@@ -91,12 +91,12 @@ It is also possible to use a component registered in the ComponentRegistry by us
         <p>If value is:</p>
         <p></p>
         <ul>
-          <li><code>component</code>: Icon is a custom component, and looks for 'component'
+          <li><code>component</code>: Icon is a custom component, and looks for &apos;component&apos;
             prop</li>
           <li><code>icon</code>: Icon is an instance of BB.Components.Icon and looks
-            for 'icon' prop</li>
+            for &apos;icon&apos; prop</li>
           <li><code>image</code>: Icon is an instance of BB.Components.Image and looks
-            for 'source' prop</li>
+            for &apos;source&apos; prop</li>
         </ul>
       </td>
     </tr>
@@ -105,15 +105,15 @@ It is also possible to use a component registered in the ComponentRegistry by us
       <td style="text-align:left">React Component | string</td>
       <td style="text-align:left">-</td>
       <td style="text-align:left">-</td>
-      <td style="text-align:left">Used when type is 'component'. Either a component or a component name
-        (string). In case of string, it will be fetched from Component Registry.</td>
+      <td style="text-align:left">Used when type is &apos;component&apos;. Either a component or a component
+        name (string). In case of string, it will be fetched from Component Registry.</td>
     </tr>
     <tr>
       <td style="text-align:left">name</td>
       <td style="text-align:left">string</td>
       <td style="text-align:left">-</td>
       <td style="text-align:left">-</td>
-      <td style="text-align:left">Used when type is 'icon'. This is the name prop of the BB.Components.Icon
+      <td style="text-align:left">Used when type is &apos;icon&apos;. This is the name prop of the BB.Components.Icon
         component</td>
     </tr>
     <tr>
@@ -121,7 +121,7 @@ It is also possible to use a component registered in the ComponentRegistry by us
       <td style="text-align:left">Image Source Prop Type</td>
       <td style="text-align:left">-</td>
       <td style="text-align:left">-</td>
-      <td style="text-align:left">Used when type is 'image'. This is the Image source.</td>
+      <td style="text-align:left">Used when type is &apos;image&apos;. This is the Image source.</td>
     </tr>
     <tr>
       <td style="text-align:left">size</td>

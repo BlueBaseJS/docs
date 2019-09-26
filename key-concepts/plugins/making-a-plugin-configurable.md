@@ -38,5 +38,3 @@ So, as shown in the example plugin above, a config `foo` for a plugin with key `
 pluign.example.foo
 ```
 
-
-

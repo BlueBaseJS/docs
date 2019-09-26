@@ -1,19 +1,20 @@
-# Progressive Web App Support
+# ⚡️ Progressive Web Apps
 
 ## Plugin Info
 
-[Workbox](https://developers.google.com/web/tools/workbox/guides/get-started) is a set of libraries and Node modules that make it easy to cache assets and take full advantage of features used to build Progressive Web Apps. Workbox provide differnt modes to enable PWA like CLI, Node Module and webpack. We are using [workbox-webpack-plugin](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin)
+[Workbox](https://developers.google.com/web/tools/workbox/guides/get-started) is a set of libraries and Node modules that make it easy to cache assets and take full advantage of features used to build Progressive Web Apps. Workbox provide different modes to enable PWA like CLI, Node Module and webpack. We are using [workbox-webpack-plugin](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin).
 
 ## **Basic Usage**
 
-PWA mode is enabled by default. All you have to do is host the *sw.js* file genearted in your dist to the root of your site and its done. You can verify the registered service worker from the application tab in chrome developer tools.
+PWA mode is enabled by default. All you have to do is host the _sw.js_ file genearted in your dist to the root of your site and its done. You can verify the registered service worker from the application tab in chrome developer tools.
 
-Talking about the caching strategy, Bluebase has one of the recommended caching strategy by workbox built-in for you. The below strategy is just for understating the cache rules currently implemented, you don't have to add these anywhere :)
+Talking about the caching strategy, Bluebase has one of the recommended caching strategy by workbox built-in for you. The below strategy is just for understating the cache rules currently implemented, you don't have to add these anywhere :\)
 
-### Implmented Caching Strategy
+### Implemented Caching Strategy
 
 **Google Fonts**
-```JS
+
+```javascript
 // Cache the Google Fonts stylesheets with a stale-while-revalidate strategy.
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.googleapis\.com/,
@@ -41,7 +42,8 @@ workbox.routing.registerRoute(
 ```
 
 **Caching Images**
-```JS
+
+```javascript
 workbox.routing.registerRoute(
   /\.(?:png|gif|jpg|jpeg|svg)$/,
   new workbox.strategies.CacheFirst({
@@ -57,7 +59,8 @@ workbox.routing.registerRoute(
 ```
 
 **Cache CSS and JavaScript Files**
-```JS
+
+```javascript
 workbox.routing.registerRoute(
   /\.(?:js|css)$/,
   new workbox.strategies.StaleWhileRevalidate({
@@ -66,26 +69,25 @@ workbox.routing.registerRoute(
 );
 ```
 
- The above is enough for you to get going with service workers but if you want to add another cache rule to existing config or you want to replace the built-in rules, you can do that.
-
+The above is enough for you to get going with service workers but if you want to add another cache rule to existing config or you want to replace the built-in rules, you can do that.
 
 ## **Advanced Usage**
 
-Configuration File path => *./bluebase/web/client.config.ts*
+Configuration File path =&gt; _./bluebase/web/client.config.ts_
 
 ### Default implementation
 
-```JS
+```javascript
 export default function (input: any) {
-	return input;
+    return input;
 }
 ```
 
 ### Change Existing Config
 
-```JS
+```javascript
 export default function (input: any) {
-	input.workBox.config.runtimeCaching.push({
+    input.workBox.config.runtimeCaching.push({
    {
         // Match any request ends with .png, .jpg, .jpeg or .svg.
         urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
@@ -109,12 +111,12 @@ export default function (input: any) {
 ```
 
 ### Custom configs
- Full configuration options can be found **[here](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#full_generatesw_config)**
+
+Full configuration options can be found [**here**](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin#full_generatesw_config)
 
 Below is a sample with an exclude option and a runtime caching strategy.
 
-
-```JS
+```javascript
 export default function (input: any) {
   input.workbox.config = {
       // Exclude images from the precache
@@ -143,14 +145,14 @@ export default function (input: any) {
 }
 ```
 
-
 ## Disable PWA
 
-Believe me that is the last thing you want to do :(
+Believe me that is the last thing you want to do :\(
 
-  ```JS
+```typescript
   export default function (input: any) {
-	  input.workbox.disable = true
-    return input;
+      input.workbox.disable = true
+      return input;
   }
-  ```
+```
+

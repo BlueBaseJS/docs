@@ -2,7 +2,7 @@
 
 ## BlueBase Boot Lifecycle Events
 
-* **`bluebase.boot`** **Internal Filter:** `bluebase-boot-default` _\(Priority = 5\)_  
+* `bluebase.boot` **Internal Filter:** `bluebase-boot-default` _\(Priority = 5\)_  
   * bluebase.boot.start
     * bluebase.components.register.internal
   * bluebase.configs.load

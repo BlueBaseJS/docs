@@ -41,22 +41,22 @@ export const ExamplePlugin = createPlugin({
     description: 'This is just an example plugin.',
     version: '1.0.0',
     categories: ['theme', 'app'],
-    
+
     icon: () => ({
         type: 'icon',
         name: 'rocket',
     }),
-    
+
     defaultConfigs: {
         'plugin.example.foo': 'bar'
     },
-    
+
     // ... any components come here
     components: [{
         key: 'Logo',
         value: import('./Logo')
     }],
-    
+
     // ... add other configs, i.e. themes, filters, etc
 });
 ```

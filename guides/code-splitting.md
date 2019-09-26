@@ -6,6 +6,6 @@ Please refer to the following links in the docs to learn how code splitting work
 
 * Plugins
 * Components
-* [Filters](../key-concepts/filters/code-splitting.md)
+* [Filters](https://github.com/BlueBaseJS/docs/tree/1995e2a3ac665c80915b14450689399e04896d57/key-concepts/filters/code-splitting.md)
 * Themes
 

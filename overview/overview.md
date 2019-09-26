@@ -1,28 +1,14 @@
 # 🛣 Roadmap
 
-## Features
-
-The following features will be added in upcoming releases:
-
-* [Route Registry](https://github.com/BlueEastCode/bluerain/issues/1)
-* [Asset Registry](https://github.com/BlueEastCode/bluerain/issues/2)
-* [Intl Registry](https://github.com/BlueEastCode/bluerain/issues/3)
-* [New Store API](https://github.com/BlueEastCode/bluerain/issues/4)
-* [SSR API](https://github.com/BlueEastCode/bluerain/issues/8)
-* [Cache Filter Results](https://github.com/BlueEastCode/bluerain/issues/10)
-* [Memoize Components](https://github.com/BlueEastCode/bluerain/issues/9)
-
 ## Future documentation Articles:
 
 ### Key Concepts
 
-* 💥 State Management
 * 🔀 Routing
 * 🖼 Assets
 
 ### Guides
 
-* 🔥 Hot Module Replacement
 * 🌏 Server Side Rendering
 * 🈯️ Internationalisation
 * 🚀 GraphQL integration
@@ -32,7 +18,6 @@ The following features will be added in upcoming releases:
 * ⛑ SEO
 * 👮 Security
 * 🍃 Tree-shaking
-* ⚡️ Progressive Web Apps
 * 🌅 Splash Screens
 * 📱 App Icons
 * ⏬ Preloading & Prefetching

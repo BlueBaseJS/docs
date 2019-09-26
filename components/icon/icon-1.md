@@ -3,7 +3,7 @@
 BB.Components.Icon
 
 {% hint style="danger" %}
-#### Not a System Component 📌
+### Not a System Component 📌
 
 This component is not shipped with BlueBase Core. You can still import it from BlueBase Core, but will need a plugin to register this component.
 {% endhint %}

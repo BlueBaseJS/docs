@@ -5,7 +5,7 @@ Renders a Component based on JSON schema. This allows developers to create dynam
 Moreover, it also makes that schema filter-able. So that any plugin can modify that schema on runtime.
 
 {% hint style="info" %}
-#### System Component 📌
+### System Component 📌
 
 This component is shipped with BlueBase Core.
 {% endhint %}

@@ -10,7 +10,7 @@ export const AnalyticsPlugin = createPlugin({
     key: 'analytics',
     name: 'Analytics Plugin',
     categories: ['analytics'],
-    
+
     filters: {
         'bluebase.analytics.track': (data: AnalyticsTrackData) => {
             // send data to analytics provider here

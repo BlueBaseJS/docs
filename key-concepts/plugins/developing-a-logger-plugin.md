@@ -18,7 +18,7 @@ export const LoggerPlugin = createPlugin({
     key: 'logger',
     name: 'Logger Plugin',
     categories: ['logging'],
-    
+
     filters: {
         'bluebase.logger.log': (message: string, data: any) => {
             // send data to logging provider here

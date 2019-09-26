@@ -46,7 +46,7 @@ export const App = () => (<BlueBaseApp BB={BB} />);
 
 ### Children
 
-If children are provided to this component, then the children node is rendered instead of [⛩Main App Layout](../../overview/main-app-layout.md). The child components can use [BlueBaseConsumer](bluebaseconsumer.md) to access BlueBase context. 
+If children are provided to this component, then the children node is rendered instead of [⛩Main App Layout](../../overview/main-app-layout.md). The child components can use [BlueBaseConsumer](bluebaseconsumer.md) to access BlueBase context.
 
 ```jsx
 import { BlueBase, BlueBaseApp } from '@bluebase/core';
@@ -71,6 +71,4 @@ export const App = () => (
 | plugins | PluginCollection | _no_ | - | Collection of plugins to add in BlueBase's Plugin Registry. |
 | themes | ThemeCollection | _no_ | - | Collection of themes to add in BlueBase's Theme Registry. |
 | testID | string | _no_ | - | Used to locate this view in end-to-end tests. |
-
-
 
