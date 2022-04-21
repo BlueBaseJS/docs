@@ -6,8 +6,7 @@ There are many ways to register new plugins in BlueBase:
 
 The easiest way to add a new plugin is pass it as a prop to `BlueBaseApp`.
 
-{% code-tabs %}
-{% code-tabs-item title="app.ts" %}
+{% code title="app.ts" %}
 ```typescript
 import { BlueBaseApp } from '@bluebase/core';
 ​
@@ -23,13 +22,11 @@ export const App = () => (
   <BlueBaseApp plugins={[ExamplePlugin]} />
 );
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Typically, in a large project you would be using the `bluebase.ts` file to inject props to your main `BlueBaseApp` component. It is basically same thing as above.
 
-{% code-tabs %}
-{% code-tabs-item title="bluebase.ts" %}
+{% code title="bluebase.ts" %}
 ```typescript
 export default {
 
@@ -44,8 +41,7 @@ export default {
     }]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## Through Registry API
 
@@ -68,5 +64,4 @@ Beware though, it is important when a plugin is added to the registry in the sys
 
 Plugins are initialised with the `bluebase.plugins.initialize.all` filter, which in turn calls the `bluebase.plugins.initialize` filter for each plugin. So you'll either need to run this filter yourself, or add a plugin before the main filter is executed by the system.
 
-Even so, to avoid unknown issues it is recommended to use the first method \([Through BlueBaseApp Component](register-a-plugin.md#through-bluebaseapp-component)\).
-
+Even so, to avoid unknown issues it is recommended to use the first method ([Through BlueBaseApp Component](register-a-plugin.md#through-bluebaseapp-component)).

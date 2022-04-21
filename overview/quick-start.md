@@ -1,58 +1,44 @@
 # 📲 Quick Start
 
-## Install BlueBase CLI
+We will use Expo CLI to create a new project and add BlueBase to it. If Expo CLI is not installed, go to the [Expo CLI Installation](https://docs.expo.dev/get-started/installation/) guide before proceeding.
 
-The first step to get started is to install BlueBase CLI as a global dependency.
+### Step 1: Initialize the project
 
-```text
-yarn global add @bluebase/cli
+Initialize an expo app by executing following commands:
+
+```shell
+# Create a project named my-app. Select the "blank" template when prompted
+expo init my-app
+
+# Navigate to the project directory
+cd my-app
 ```
 
-## Install Target Platform CLI Plugin
+More info [here](https://docs.expo.dev/get-started/create-a-new-app/).
 
-Next, you need to install the desired target platform plugin of BlueBase CLI. This plugin adds commands to the CLI that can perform platform specific tasks \(i.e. start project in development mode, build project, etc\).
+### Step 2: Install BlueBase package
 
-{% tabs %}
-{% tab title="Web" %}
-```text
-bluebase plugins:add @bluebase/cli-web
+```shell
+yarn add @bluebase/core
 ```
-{% endtab %}
 
-{% tab title="Expo \(iOS & Android\)" %}
-```bash
-bluebase plugins:add @bluebase/cli-expo
+### Step 3: Update App File
+
+{% code title="App.tsx" %}
+```typescript
+import React from 'react';
+import { BlueBaseApp } from '@bluebase/core';
+
+export default function App() {
+  return (
+    <BlueBaseApp />
+  );
+}
 ```
-{% endtab %}
+{% endcode %}
 
-{% tab title="Electron \(Windows, Linux & macOS\)" %}
-```text
-bluebase plugins:add @bluebase/cli-electron
+### Step 4: Run App
+
+```shell
+expo start
 ```
-{% endtab %}
-{% endtabs %}
-
-## Start Project
-
-Start the project in development mode.
-
-{% tabs %}
-{% tab title="Web" %}
-```text
-bluebase web:start
-```
-{% endtab %}
-
-{% tab title="Expo \(iOS & Android\)" %}
-```bash
-bluebase expo:start
-```
-{% endtab %}
-
-{% tab title="Electron \(Windows, Linux & macOS\)" %}
-```text
-bluebase electron:start
-```
-{% endtab %}
-{% endtabs %}
-

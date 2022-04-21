@@ -88,22 +88,21 @@
 
 * [Expo](cli/expo.md)
 * [Web](cli/web.md)
-* [Storybook \(Web\)](cli/storybook.md)
-* [Storybook Native \(Expo\)](cli/storybook-native.md)
+* [Storybook (Web)](cli/storybook.md)
+* [Storybook Native (Expo)](cli/storybook-native.md)
 
 ## Tutorial
 
 * [Overview](tutorial/overview.md)
 * [0. Set Up Your Development Environment](tutorial/0.-set-up-your-development-environment.md)
-* [1. Create a Backend API](tutorial/1.-create-a-backend-api.md)
-* [Create a new Plugin](tutorial/create-a-new-plugin.md)
+* [1. Create a Backend API](tutorial/1.-create-a-backend-api/README.md)
+  * [Create a new Plugin](tutorial/1.-create-a-backend-api/create-a-new-plugin.md)
 * [2. Create Screens](tutorial/2.-create-screens.md)
 * [3. Working on Components](tutorial/3.-working-on-components.md)
 * [4. Working with Data](tutorial/4.-working-with-data.md)
 * [5. Forms](tutorial/5.-forms.md)
 * [6. Translating your App in other languages](tutorial/6.-translating-your-app-in-other-languages.md)
-* [7. Themeing](tutorial/7.-themeing.md)
+* [7. Theming](tutorial/7.-themeing.md)
 * [8. Making your app configurable](tutorial/8.-making-your-app-configurable.md)
 * [9. Plugins](tutorial/9.-plugins.md)
 * [10. Going Live!](tutorial/10.-going-live.md)
-

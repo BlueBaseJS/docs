@@ -8,8 +8,7 @@ There may be use cases where you may need to keep specific values same, no matte
 
 To do this, use the `theme.overrides` config. This change is global, and overrides all installed themes.
 
-{% code-tabs %}
-{% code-tabs-item title="bluebase.ts" %}
+{% code title="bluebase.ts" %}
 ```typescript
 const bootOptions = {
 
@@ -24,15 +23,14 @@ const bootOptions = {
 
 export default bootOptions;
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## Specific variation, global usage
 
 BlueBase ships with two built-in themes: `BlueBase Light` & `BlueBase Dark`. You can extend any of the two to create you own theme.
 
-{% code-tabs %}
-{% code-tabs-item title="MyCustomTheme.ts" %}
+{% tabs %}
+{% tab title="MyCustomTheme.ts" %}
 ```typescript
 import { buildTheme } from '@bluebase/core';
 
@@ -42,9 +40,9 @@ export const MyCustomTheme = ('light')({
     // ... theme props
 });
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="App.ts" %}
+{% tab title="App.ts" %}
 ```typescript
 import { BlueBaseApp } from '@bluebase/core';
 import { MyCustomTheme } from './MyCustomTheme.ts';
@@ -53,8 +51,8 @@ export const App = () => (
     <BlueBaseApp themes={[MyCustomTheme]} />
 );
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Specific variation, one time usage
 
@@ -89,4 +87,3 @@ The `ThemeProvider` component can also be used to override a theme for a one tim
     {/* All components here will now have a red background color */}
 </ThemeProvider>
 ```
-

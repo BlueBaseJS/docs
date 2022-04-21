@@ -1,17 +1,10 @@
----
-description: >-
-  Expo is a development tool for Mobile specific Apps using React and React
-  Native. BlueBase Cli v4 has it's own builtin commands that integrate Expo
-  within itself.
----
-
 # Expo
 
 ## Installation
 
 First of all @blueeast/bluerain-cli-expo plugin must be installed using globally installed bluerain-cli by executing the following commands in your terminal.
 
-```text
+```
 bluerain plugins:add @blueeast/bluerain-cli-expo
 ```
 
@@ -21,13 +14,13 @@ This will install the latest Expo Plugin for global usage and will install the n
 
 After done setting up this plugin. You can go ahead and utilize this cli feature in your newly created or already existing project using BlueBase.
 
-```text
+```
 bluerain expo:init
 ```
 
-Let's start with the init command. This command makes your project ready to be used using expo. It initializes basic bluerain/expo \(configuration\) and assets/expo \(images, icons etc\) needed to get your app up and running. It also install some required dependencies and devDependencies to be fully operational.
+Let's start with the init command. This command makes your project ready to be used using expo. It initializes basic bluerain/expo (configuration) and assets/expo (images, icons etc) needed to get your app up and running. It also install some required dependencies and devDependencies to be fully operational.
 
-```text
+```
 bluerain expo:start
 ```
 
@@ -39,15 +32,14 @@ Once you are done creating your app & you have tested your app on expo in produc
 
 for Android.
 
-```text
+```
 bluerain expo:build:android
 ```
 
 for iOS
 
-```text
+```
 bluerain expo:build:ios
 ```
 
-These commands will instantiate expo's own build commands. Follow up the official expo build procedure and you will end up having apk \(for android\) and ipa \(for iOS\) installation files ready to be loaded in your device.
-
+These commands will instantiate expo's own build commands. Follow up the official expo build procedure and you will end up having apk (for android) and ipa (for iOS) installation files ready to be loaded in your device.

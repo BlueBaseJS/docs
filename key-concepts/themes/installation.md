@@ -4,8 +4,7 @@
 
 The easiest way to install themes in BlueBase is to import your theme into the `themes` property in the _bluebase_ file in your project.
 
-{% code-tabs %}
-{% code-tabs-item title="bluebase.ts" %}
+{% code title="bluebase.ts" %}
 ```typescript
 const bootOptions = {
 
@@ -17,8 +16,7 @@ const bootOptions = {
 
 export default bootOptions;
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 This method is especially useful if you're developing a theme or have a custom theme in your project.
 
@@ -31,4 +29,3 @@ Hence, a better option is to package your theme as a plugin.
 ## Creating a Theme Plugin
 
 To register themes via plugin, you need need to create a new plugin or modify an existing one. Follow this [guide](../plugins/developing-a-theme-plugin.md) to learn more.
-
