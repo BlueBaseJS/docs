@@ -1,4 +1,4 @@
-# 2. Create Screens
+# 3. Create Screens
 
 ## &#x20;**Create Screen**
 
@@ -205,7 +205,7 @@ return <IconButton name="plus" onPress={onSettingsPress} color={theme.palette.te
 };
 ```
 
-![](<../.gitbook/assets/button in header (1).png>)
+![](<../../.gitbook/assets/button in header (1).png>)
 
 ## **DetailedScreen.tsx**
 
@@ -248,7 +248,7 @@ return (
 DetailedScreen.displayName = 'DetailedScreen';
 ```
 
-&#x20;                                 ![](<../.gitbook/assets/detail screen (1).png>)
+&#x20;                                 ![](<../../.gitbook/assets/detail screen (1).png>)
 
 ## **CreateScreen.tsx**
 
@@ -293,7 +293,7 @@ return (
 CreateTaskScreen.displayName = 'CreateTaskScreen';
 ```
 
-&#x20;                                   ![](<../.gitbook/assets/SS (1).png>)
+&#x20;                                   ![](<../../.gitbook/assets/SS (1).png>)
 
 ## **DoneTaskScreen.tsx**
 
@@ -346,4 +346,4 @@ return (
 MyPluginHomeScreen.displayName = 'MyPluginHomeScreen';
 ```
 
-&#x20;                                  ![](<../.gitbook/assets/donescreen (1).png>)
+&#x20;                                  ![](<../../.gitbook/assets/donescreen (1).png>)
