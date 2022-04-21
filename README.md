@@ -10,7 +10,7 @@ Create modular applications by breaking different features into independent plug
 
 ### **🎁 Components**
 
-Create pluggable components that can be dynamically replaced or modified through third-party plugins, without needing to change the original code. This makes it extremely easy to enhance existing views or screens in the app by writing your own plugin. 🚏
+Create pluggable components that can be dynamically replaced or modified through third-party plugins, without needing to change the original code. This makes it extremely easy to enhance existing views or screens in the app by writing your own plugin.
 
 ### **🚏 Routes**&#x20;
 

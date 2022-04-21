@@ -93,9 +93,8 @@
 
 ## Tutorial
 
-* [Overview](tutorial/overview.md)
-* [0. Set Up Your Development Environment](tutorial/0.-set-up-your-development-environment.md)
-* [1. Create a Backend API](tutorial/1.-create-a-backend-api.md)
+* [Getting Started](tutorial/overview.md)
+* [1. Backend API](tutorial/1.-create-a-backend-api.md)
   * [Create a new Plugin](tutorial/create-a-new-plugin.md)
 * [2. Create Screens](tutorial/2.-create-screens.md)
 * [3. Working on Components](tutorial/3.-working-on-components.md)
