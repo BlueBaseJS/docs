@@ -93,7 +93,10 @@
 
 ## Tutorial
 
-* [Getting Started](tutorial/overview.md)
+* [1. Getting Started](tutorial/overview/README.md)
+  * [1.1 Setup](tutorial/overview/1.1-setup.md)
+  * [1.2 Add Plugins](tutorial/overview/1.2-add-plugins.md)
+  * [1.3 Create Custom Plugin](tutorial/overview/1.3-create-custom-plugin.md)
 * [1. Backend API](tutorial/1.-create-a-backend-api.md)
   * [Create a new Plugin](tutorial/create-a-new-plugin.md)
 * [2. Create Screens](tutorial/2.-create-screens.md)
