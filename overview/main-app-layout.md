@@ -8,5 +8,5 @@ This component takes care of initialisation and renders the `SystemApp` componen
 
 If children prop is provided, then it renders the children prop instead of the Main App Layout.
 
-![](../.gitbook/assets/Layout2.png)
+![](../.gitbook/assets/layout2.png)
 
