@@ -102,7 +102,7 @@
   * [2.2 Setup Apollo Client](tutorial/1.-create-a-backend-api/2.2-setup-apollo-client.md)
   * [2.3 Generate Typescript Interfaces](tutorial/1.-create-a-backend-api/2.3-generate-typescript-interfaces.md)
 * [3. Create Screens](tutorial/2.-create-screens/README.md)
-  * [3.1 TaskListScreen](tutorial/2.-create-screens/3.1-tasklistscreen.md)
+  * [3.1 TasksListScreen](tutorial/2.-create-screens/3.1-taskslistscreen.md)
   * [3.2 TaskDetailScreen](tutorial/2.-create-screens/3.2-taskdetailscreen.md)
   * [3.3 TaskCreateScreen](tutorial/2.-create-screens/3.3-taskcreatescreen.md)
 * [4. Building UI](tutorial/4.-building-ui/README.md)
