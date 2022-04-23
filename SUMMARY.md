@@ -2,18 +2,36 @@
 
 * [💧 Introduction](README.md)
 
-## Overview
+## Tutorial
 
-* [📲 Quick Start](overview/quick-start.md)
-* [🎛 Configuration with bluebase.js](overview/configuration-with-bluerain.js.md)
-* [🎡 Lifecycle Events](overview/lifecycle-event.md)
-* [🧠 Thinking in BlueBase](overview/thinking-in-bluebase.md)
-* [⛩ Main App Layout](overview/main-app-layout.md)
-* [🏋️‍♀️ How BlueBase works](overview/how-bluerain-works.md)
-* [🛣 Roadmap](overview/overview.md)
+* [1. Getting Started](tutorial/overview/README.md)
+  * [1.1 Setup](tutorial/overview/1.1-setup.md)
+  * [1.2 Add Plugins](tutorial/overview/1.2-add-plugins.md)
+  * [1.3 Create Custom Plugin](tutorial/overview/1.3-create-custom-plugin.md)
+* [2. Backend API](tutorial/1.-create-a-backend-api.md)
+  * [2.1 Create Backend API](tutorial/create-a-new-plugin.md)
+  * [2.2 Setup Apollo Client](tutorial/1.-create-a-backend-api/2.2-setup-apollo-client.md)
+  * [2.3 Generate Typescript Interfaces](tutorial/1.-create-a-backend-api/2.3-generate-typescript-interfaces.md)
+* [3. Create Screens](tutorial/2.-create-screens/README.md)
+  * [3.1 Pending Tasks Screen](tutorial/2.-create-screens/3.1-pending-tasks-screen.md)
+  * [3.2 Edit Task Screen](tutorial/2.-create-screens/3.2-edit-task-screen.md)
+  * [3.3 Task Create Screen](tutorial/2.-create-screens/3.3-task-create-screen.md)
+  * [3.4 Tab Navigation](tutorial/2.-create-screens/3.4-tab-navigation.md)
+* [4. Building UI](tutorial/4.-building-ui/README.md)
+  * [4.1 Create Task Form](tutorial/4.-building-ui/4.1-create-task-form.md)
+  * [4.2 Task List](tutorial/4.-building-ui/4.2-task-list.md)
+  * [4.3 Edit Task Form](tutorial/4.-building-ui/4.3-edit-task-form.md)
+  * [4.4 Delete Task Button](tutorial/4.-building-ui/4.4-delete-task-button.md)
+* [5. Enhancements](tutorial/5.-forms/README.md)
+  * [Translations](tutorial/5.-forms/translations.md)
+  * [Theming](tutorial/5.-forms/theming.md)
+  * [Settings & Configurations](tutorial/5.-forms/settings-and-configurations.md)
+  * [User Management](tutorial/5.-forms/user-management.md)
 
 ## Key Concepts
 
+* [🎡 Lifecycle Events](key-concepts/lifecycle-event.md)
+* [⛩ Main App Layout](key-concepts/main-app-layout.md)
 * [🔌 Plugins](key-concepts/plugins/README.md)
   * [Plugin API](key-concepts/plugins/plugin-api.md)
   * [Register a Plugin](key-concepts/plugins/register-a-plugin.md)
@@ -40,13 +58,14 @@
   * [Theme Configs](key-concepts/themes/theme-configs.md)
   * [Theme Structure](key-concepts/themes/theme-structure.md)
 * [🎛 Configs](key-concepts/configs.md)
-* [Registry](key-concepts/registry.md)
+* [🛣 Roadmap](key-concepts/overview.md)
 
 ## API
 
 * [📈 Analytics](api/analytics.md)
 * [📔 Logger](api/logger.md)
 * [📦 BlueBase Modules](api/bluerain-modules.md)
+* [Registry](api/registry.md)
 
 ## Guides
 
@@ -83,34 +102,3 @@
 * [StatefulComponent 📌](components/statefulcomponent.md)
 * [Typography](components/typography.md)
 * [View](components/view.md)
-
-## CLI
-
-* [Expo](cli/expo.md)
-* [Web](cli/web.md)
-* [Storybook (Web)](cli/storybook.md)
-* [Storybook Native (Expo)](cli/storybook-native.md)
-
-## Tutorial
-
-* [1. Getting Started](tutorial/overview/README.md)
-  * [1.1 Setup](tutorial/overview/1.1-setup.md)
-  * [1.2 Add Plugins](tutorial/overview/1.2-add-plugins.md)
-  * [1.3 Create Custom Plugin](tutorial/overview/1.3-create-custom-plugin.md)
-* [2. Backend API](tutorial/1.-create-a-backend-api.md)
-  * [2.1 Create Backend API](tutorial/create-a-new-plugin.md)
-  * [2.2 Setup Apollo Client](tutorial/1.-create-a-backend-api/2.2-setup-apollo-client.md)
-  * [2.3 Generate Typescript Interfaces](tutorial/1.-create-a-backend-api/2.3-generate-typescript-interfaces.md)
-* [3. Create Screens](tutorial/2.-create-screens/README.md)
-  * [3.1 TasksListScreen](tutorial/2.-create-screens/3.1-taskslistscreen.md)
-  * [3.2 TaskDetailScreen](tutorial/2.-create-screens/3.2-taskdetailscreen.md)
-  * [3.3 TaskCreateScreen](tutorial/2.-create-screens/3.3-taskcreatescreen.md)
-* [4. Building UI](tutorial/4.-building-ui/README.md)
-  * [4.1 Creating Task List](tutorial/4.-building-ui/4.1-creating-task-list.md)
-  * [4.2 Working with Forms](tutorial/4.-building-ui/4.2-working-with-forms.md)
-* [5. Forms](tutorial/5.-forms.md)
-* [6. Translating your App in other languages](tutorial/6.-translating-your-app-in-other-languages.md)
-* [7. Theming](tutorial/7.-themeing.md)
-* [8. Making your app configurable](tutorial/8.-making-your-app-configurable.md)
-* [9. Plugins](tutorial/9.-plugins.md)
-* [10. Going Live!](tutorial/10.-going-live.md)

@@ -49,4 +49,10 @@ select graphql.rebuild_schema();
 
 ![](<../.gitbook/assets/Screenshot 2022-04-21 at 11.40.13 PM.png>)
 
+### 5. API Details
+
+Go to `Settings => API` page. Here you can find the API URL and Key as shown in the screenshot below.
+
+![](<../.gitbook/assets/Screenshot 2022-04-23 at 1.24.38 PM.png>)
+
 That's all. We're done with creating our API for the project. All we need to do is consume it now.

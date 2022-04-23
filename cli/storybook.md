@@ -1,4 +1,0 @@
-# Storybook \(Web\)
-
-
-
