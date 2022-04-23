@@ -13,16 +13,16 @@
   * [2.2 Setup Apollo Client](tutorial/1.-create-a-backend-api/2.2-setup-apollo-client.md)
   * [2.3 Generate Typescript Interfaces](tutorial/1.-create-a-backend-api/2.3-generate-typescript-interfaces.md)
 * [3. Create Screens](tutorial/2.-create-screens/README.md)
-  * [3.1 Pending Tasks Screen](tutorial/2.-create-screens/3.1-pending-tasks-screen.md)
-  * [3.2 Edit Task Screen](tutorial/2.-create-screens/3.2-edit-task-screen.md)
-  * [3.3 Task Create Screen](tutorial/2.-create-screens/3.3-task-create-screen.md)
+  * [3.1 Pending Tasks Screen](tutorial/2.-create-screens/3.1-tasklistscreen.md)
+  * [3.2 Edit Task Screen](tutorial/2.-create-screens/3.2-taskdetailscreen.md)
+  * [3.3 Task Create Screen](tutorial/2.-create-screens/3.3-taskcreatescreen.md)
   * [3.4 Tab Navigation](tutorial/2.-create-screens/3.4-tab-navigation.md)
-* [4. Building UI](tutorial/4.-building-ui/README.md)
-  * [4.1 Create Task Form](tutorial/4.-building-ui/4.1-create-task-form.md)
-  * [4.2 Task List](tutorial/4.-building-ui/4.2-task-list.md)
-  * [4.3 Edit Task Form](tutorial/4.-building-ui/4.3-edit-task-form.md)
-  * [4.4 Delete Task Button](tutorial/4.-building-ui/4.4-delete-task-button.md)
-* [5. Enhancements](tutorial/5.-forms/README.md)
+* [4. CRUD Operations](tutorial/4.-crud-operations/README.md)
+  * [4.1 Creating Tasks](tutorial/4.-crud-operations/4.1-creating-tasks.md)
+  * [4.2 Reading Tasks](tutorial/4.-crud-operations/4.2-reading-tasks.md)
+  * [4.3 Updating Tasks](tutorial/4.-crud-operations/4.3-updating-tasks.md)
+  * [4.4 Deleting Tasks](tutorial/4.-crud-operations/4.4-deleting-tasks.md)
+* [5. Enhancements](tutorial/5.-forms.md)
   * [Translations](tutorial/5.-forms/translations.md)
   * [Theming](tutorial/5.-forms/theming.md)
   * [Settings & Configurations](tutorial/5.-forms/settings-and-configurations.md)
@@ -30,8 +30,8 @@
 
 ## Key Concepts
 
-* [🎡 Lifecycle Events](key-concepts/lifecycle-event.md)
-* [⛩ Main App Layout](key-concepts/main-app-layout.md)
+* [🎡 Lifecycle Events](overview/lifecycle-event.md)
+* [⛩ Main App Layout](overview/main-app-layout.md)
 * [🔌 Plugins](key-concepts/plugins/README.md)
   * [Plugin API](key-concepts/plugins/plugin-api.md)
   * [Register a Plugin](key-concepts/plugins/register-a-plugin.md)
@@ -58,14 +58,14 @@
   * [Theme Configs](key-concepts/themes/theme-configs.md)
   * [Theme Structure](key-concepts/themes/theme-structure.md)
 * [🎛 Configs](key-concepts/configs.md)
-* [🛣 Roadmap](key-concepts/overview.md)
+* [🛣 Roadmap](overview/overview.md)
 
 ## API
 
 * [📈 Analytics](api/analytics.md)
 * [📔 Logger](api/logger.md)
 * [📦 BlueBase Modules](api/bluerain-modules.md)
-* [Registry](api/registry.md)
+* [Registry](key-concepts/registry.md)
 
 ## Guides
 

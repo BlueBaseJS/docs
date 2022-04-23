@@ -30,6 +30,8 @@ When the form opens, add the following columns to match the screenshot below:
 4. completed (bool)
 5. created\_at (timestamptz)
 
+Make sure "Enable Row Level Security" is <mark style="color:red;">**NOT**</mark> checked.
+
 ![Add table columns](<../.gitbook/assets/Screenshot 2022-04-21 at 11.27.30 PM.png>)
 
 ### **4. Build GraphQL Schema**
