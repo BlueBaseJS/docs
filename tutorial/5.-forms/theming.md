@@ -1,6 +1,7 @@
 # Theming
 
-```
+{% code title="" %}
+```typescript
 export const configs = {
 
 	// ... Other Configs
@@ -19,5 +20,6 @@ export const configs = {
 };
 
 ```
+{% endcode %}
 
 ![](<../../.gitbook/assets/Screenshot 2022-04-25 at 12.16.51 AM.png>) ![](<../../.gitbook/assets/Screenshot 2022-04-25 at 12.31.53 AM.png>)

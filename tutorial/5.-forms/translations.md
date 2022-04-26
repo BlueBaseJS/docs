@@ -5,7 +5,7 @@
 ![](<../../.gitbook/assets/Screenshot 2022-04-24 at 11.35.58 PM.png>) ![](<../../.gitbook/assets/Screenshot 2022-04-24 at 11.36.21 PM.png>)
 
 {% code title="configs.ts" %}
-```
+```typescript
 export const configs = {
 
 	'locale.options': {
@@ -22,7 +22,8 @@ export const configs = {
 
 
 
-```
+{% code title="" %}
+```typescript
 import { ComponentState, ComponentStateProps } from '@bluebase/components';
 import { useIntl, useNavigation } from '@bluebase/core';
 import React, { useCallback } from 'react';
@@ -51,8 +52,10 @@ export const TaskListEmptyState = (props: TaskListEmptyStateProps) => {
 
 TaskListEmptyState.displayName = 'TaskListEmptyState';
 ```
+{% endcode %}
 
-```
+{% code title="" %}
+```typescript
 import { IntlMessages } from '@bluebase/core';
 
 export const ur = (messages: IntlMessages) => ({
@@ -74,8 +77,10 @@ export const ur = (messages: IntlMessages) => ({
 
 export default ur;
 ```
+{% endcode %}
 
-```
+{% code title="" %}
+```typescript
 import { ur } from './ur';
 
 export const lang = {
@@ -83,8 +88,10 @@ export const lang = {
 };
 
 ```
+{% endcode %}
 
-```
+{% code title="" %}
+```typescript
 import { createPlugin } from '@bluebase/core';
 
 import { ToDoAppIcon } from './components/ToDoAppIcon';
@@ -120,5 +127,6 @@ export default createPlugin({
 });
 
 ```
+{% endcode %}
 
 ![](<../../.gitbook/assets/Screenshot 2022-04-24 at 11.36.42 PM.png>) ![](<../../.gitbook/assets/Screenshot 2022-04-24 at 11.36.53 PM.png>)

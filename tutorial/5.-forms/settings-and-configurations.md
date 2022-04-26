@@ -10,7 +10,7 @@
 
 Let's go back to our TaskList component from [Chapter 4.2](../4.-building-ui/4.1-creating-task-list.md).
 
-```
+```typescript
 import { QueryResult } from '@apollo/client';
 import { Divider } from '@bluebase/components';
 import { getComponent } from '@bluebase/core';
