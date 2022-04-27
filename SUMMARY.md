@@ -23,10 +23,10 @@
   * [4.3 Updating Tasks](tutorial/4.-crud-operations/4.3-updating-tasks.md)
   * [4.4 Deleting Tasks](tutorial/4.-crud-operations/4.4-deleting-tasks.md)
 * [5. Enhancements](tutorial/5.-forms.md)
-  * [Translations](tutorial/5.-forms/translations.md)
-  * [Theming](tutorial/5.-forms/theming.md)
-  * [Settings & Configurations](tutorial/5.-forms/settings-and-configurations.md)
-  * [Assets](tutorial/5.-forms/assets.md)
+  * [5.1 Internationalisation](tutorial/5.-forms/5.1-internationalisation.md)
+  * [5.2 Theming](tutorial/5.-forms/5.2-theming.md)
+  * [5.3 Dynamic Images](tutorial/5.-forms/5.3-dynamic-images.md)
+  * [5.4 Settings & Configurations](tutorial/5.-forms/5.4-settings-and-configurations.md)
   * [User Management](tutorial/5.-forms/user-management.md)
 
 ## Key Concepts
@@ -52,7 +52,6 @@
   * [Accessing Components](key-concepts/components/accessing-components.md)
   * [Higher Order Components](key-concepts/components/higher-order-components.md)
 * [🎨 Themes](key-concepts/themes/README.md)
-  * [Installation](key-concepts/themes/installation.md)
   * [Consuming Selected Theme](key-concepts/themes/consuming-selected-theme.md)
   * [Customise Themes](key-concepts/themes/override-themes.md)
   * [Customise Components](key-concepts/themes/customise-components.md)
