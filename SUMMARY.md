@@ -58,7 +58,6 @@
   * [Theme Configs](key-concepts/themes/theme-configs.md)
   * [Theme Structure](key-concepts/themes/theme-structure.md)
 * [🎛 Configs](key-concepts/configs.md)
-* [🛣 Roadmap](overview/overview.md)
 
 ## API
 
