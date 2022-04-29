@@ -41,7 +41,7 @@ const Header = () => (<Logo />);
 
 See how this makes the code much more developer friendly.
 
-It is also possible to get a typed component by providing it props interface: 
+It is also possible to get a typed component by providing it props interface:&#x20;
 
 ```typescript
 import { getComponent } from '@bluebase/core';
@@ -57,12 +57,12 @@ To make it even more convenient, we export some basic components out of box. Thi
 
 ```diff
 - import { Image, Text, View } from 'react-native';
-+ import { Image, Text, View } from '@bluebase/core';
++ import { Image, Text, View } from '@bluebase/components';
 ```
 
 ## Fallback Components
 
-Sometimes, you may need to have fallback components. So if they desired component is not found, a back up component can be used. In BlueBase it is very easy to achieve this. Just provide multiple arguments to the resolve function. 
+Sometimes, you may need to have fallback components. So if they desired component is not found, a back up component can be used. In BlueBase it is very easy to achieve this. Just provide multiple arguments to the resolve function.&#x20;
 
 ```typescript
 const Logo = BB.Components.resolve('AnimatedLogo', 'SingleColorLogo', 'Logo');
@@ -88,5 +88,4 @@ For that reason, BlueRain provides a `getValue` method that lets you access the 
 const rawLogoComponent = await BB.Components.getValue('Logo');
 ```
 
-Note that, we used the `await` keyword. This is because the getValue method will return the component wrapped in a promise. This is because some components may in different bundles \(because of code splitting\).
-
+Note that, we used the `await` keyword. This is because the getValue method will return the component wrapped in a promise. This is because some components may in different bundles (because of code splitting).

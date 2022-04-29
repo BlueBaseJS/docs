@@ -10,7 +10,7 @@ The basic steps to add your own filters to BlueBase (described in more detail be
    2. Call BB.Filters.register() function.
 
 {% hint style="info" %}
-The BlueBase Filters feature is heavily inspired from Wordpress [Filters](https://codex.wordpress.org/Plugin\_API#Filters).
+The BlueBase Filters feature is heavily inspired by WordPress [Filters](https://codex.wordpress.org/Plugin\_API#Filters).
 {% endhint %}
 
 ### Create a Filter Function
@@ -59,53 +59,40 @@ await BB.Filters.register({
 
 where:
 
-**event**
-
-The name of a filter event that is provided by the developer. Defines when your filter should be applied.
-
-**key**
-
-A unique ID of the function that you want to use for filtering. Keep in mind that other plugins or the BlueBase core may already be using the function key you have thought of, in that case one filter will overwrite the other.
-
-**value**
-
-The filter function. This function may or may not be an async function. The function will always have 3 params:
-
-1. **value**: The value that is being filtered
-2. **context**: An object that may have extra arguments or data, passed at the time of execution.
-3. **BB**: The BlueBase instance.
-
-**priority**
-
-An optional integer argument that can be used to specify the order in which the functions associated with a particular filter are executed (default: 10). Lower numbers correspond with earlier execution, and functions with the same priority are executed in the order in which they were added to the filter.
-
-**Return Value**
-
-The (optionally modified) value of the first argument is passed to the filter function.
+* **event**\
+  ****The name of a filter event that is provided by the developer. Defines when your filter should be applied.
+* **key**\
+  ****A unique ID of the function that you want to use for filtering. Keep in mind that other plugins or the BlueBase core may already be using the function key you have thought of, in that case, one filter will overwrite the other.
+* **value**\
+  ****The filter function. This function may or may not be an async function. The function will always have 3 params:
+  1. **value**: The value that is being filtered
+  2. **context**: An object that may have extra arguments or data, passed at the time of execution.
+  3. **BB**: The BlueBase instance.
+* **priority**\
+  ****An optional integer argument that can be used to specify the order in which the functions associated with a particular filter are executed (default: 10). Lower numbers correspond with earlier execution, and functions with the same priority are executed in the order in which they were added to the filter.
+* **Return Value**\
+  ****The (optionally modified) value of the first argument is passed to the filter function.
 
 You can also remove filters from filter hooks using the BB.Filters.delete() function. See Removing Actions and Filters.
 
 ### Executing a Filter
 
+#### BB.Filters.run function
+
 You may define and execute your own filters by calling the following method
 
 ```typescript
-await BB.Filters.run(event, value, [context])
+const newValue = await BB.Filters.run(event, value, [context])
 ```
 
 where
 
-**event**
-
-The name of a filter event
-
-**value**
-
-The value that is being filtered
-
-**context**
-
-An optional object that may have extra arguments or data
+* **event**\
+  ****The name of a filter event
+* **value**\
+  ****The value that is being filtered
+* **context**\
+  ****An optional object that may have extra arguments or data
 
 In the example above, we would put the following params in the function:
 
@@ -116,6 +103,27 @@ await BB.Filters.run(
     { postId: '123' }
 );
 ```
+
+#### useFilter hook
+
+Since BB.Filters.run() function returns a Promise, it gets a bit tricky to handle in a component. For this reason we provide a useFilter hook as well:
+
+```typescript
+const { value, loading, error } = useFilter(
+    'post.comment',
+    'A comment with profanity',
+    { postId: '123' }
+);
+```
+
+where the return value is an object with following properties:
+
+* **value**\
+  The (optionally modified) value of the first argument is passed to the filter function.
+* **loading**\
+  A flag that indicates if data is currently loading.
+* **error**\
+  If an error occurs, it will be set in this variable.&#x20;
 
 ### Removing Filters
 
