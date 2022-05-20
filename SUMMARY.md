@@ -64,6 +64,7 @@
 ## Guides
 
 * [✂ Code Splitting](guides/code-splitting.md)
+* [👽 Migrating to V8](guides/migrating-to-v8.md)
 
 ## Components
 
